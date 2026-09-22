@@ -6,17 +6,15 @@
 /*   By: alsadyko <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/21 19:19:38 by alsadyko          #+#    #+#             */
-/*   Updated: 2026/09/21 19:21:15 by alsadyko         ###   ########.fr       */
+/*   Updated: 2026/09/22 12:43:09 by alsadyko         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 void ft_swap(int *a, int *b)
 {
-	int a;
-	int b;
-
-	*a = a;
-	a = *b;
-	*b = b;
-
+	int temp;
+	
+	temp = *a;
+	*a = *b;
+	*b = temp;
 }
