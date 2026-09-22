@@ -6,26 +6,33 @@
 /*   By: alsadyko <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/21 18:41:12 by alsadyko          #+#    #+#             */
-/*   Updated: 2026/09/21 18:44:57 by alsadyko         ###   ########.fr       */
+/*   Updated: 2026/09/22 19:24:38 by alsadyko         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-void ft_print_numbers(void)
+void	ft_putchar(char c);
+/*{
+	write(1, &c, 1);
+}*/
+
+void	ft_print_numbers(void)
 {
-	int n = 0;
+	int			n;
+	char		c;
+
+	n = 0;
 	while (n < 10)
 	{
-		char c = n + '0';
-		write(1, &c, 1);
+		c = n + '0';
+		ft_putchar(c);
 		n++;
 	}
-
 }
-
-int main(void)
+/*
+int	main(void)
 {
 	ft_print_numbers();
 	return (0);
-}
+}*/

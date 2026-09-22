@@ -6,27 +6,31 @@
 /*   By: alsadyko <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/21 18:41:12 by alsadyko          #+#    #+#             */
-/*   Updated: 2026/09/21 18:50:41 by alsadyko         ###   ########.fr       */
+/*   Updated: 2026/09/22 19:41:53 by alsadyko         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-void ft_is_negative(int n)
-{
-	if (n < 0){
-		write(1, "N", 1);
-	
-	}
-	else 
-	{	
-		write(1, "P", 1);
-	}
+void	ft_putchar(char c);
+/*{
+	write(1, &c, 1);
+}*/
 
+void	ft_is_negative(int n)
+{
+	if (n < 0)
+	{
+		ft_putchar('N');
+	}
+	else
+	{
+		ft_putchar('P');
+	}
 }
-
-int main(void)
+/*
+int	main(void)
 {
-	ft_is_negative(0);
+	ft_is_negative(-10);
 	return (0);
-}
+}*/

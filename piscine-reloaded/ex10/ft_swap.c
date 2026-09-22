@@ -6,14 +6,14 @@
 /*   By: alsadyko <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/21 19:19:38 by alsadyko          #+#    #+#             */
-/*   Updated: 2026/09/22 12:43:09 by alsadyko         ###   ########.fr       */
+/*   Updated: 2026/09/22 14:02:26 by alsadyko         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void ft_swap(int *a, int *b)
+void	ft_swap(int *a, int *b)
 {
-	int temp;
-	
+	int	temp;
+
 	temp = *a;
 	*a = *b;
 	*b = temp;

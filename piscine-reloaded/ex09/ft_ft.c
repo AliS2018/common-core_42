@@ -6,13 +6,13 @@
 /*   By: alsadyko <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/21 18:51:16 by alsadyko          #+#    #+#             */
-/*   Updated: 2026/09/21 19:18:11 by alsadyko         ###   ########.fr       */
+/*   Updated: 2026/09/22 14:01:13 by alsadyko         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-void ft_ft(int *nbr)
+void	ft_ft(int *nbr)
 {
 	*nbr = 42;
 }

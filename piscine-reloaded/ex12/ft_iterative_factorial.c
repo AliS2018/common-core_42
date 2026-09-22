@@ -1,29 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_alpabet.c                                 :+:      :+:    :+:   */
+/*   ft_iterative_factorial.c                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: alsadyko <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/09/21 18:30:03 by alsadyko          #+#    #+#             */
-/*   Updated: 2026/09/21 18:45:12 by alsadyko         ###   ########.fr       */
+/*   Created: 2026/09/22 19:48:41 by alsadyko          #+#    #+#             */
+/*   Updated: 2026/09/22 21:17:01 by alsadyko         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
+#include <stdio.h>
 
-void ft_print_alphabet(void)
+int	ft_iterative_factorial(int nb)
 {
-	char a = 'a';
-	while ( a <= 'z')
+	int	i;
+
+	i = 1;
+	if (nb < 0)
+		return (0);
+	while (nb > 1)
 	{
-		write(1, &a, 1);
-		a++;
+		i = i * nb;
+		nb--;
 	}
-
-
+	return (i);
 }
-int main(void){
-	ft_print_alphabet();
-	return (0);
-}
+
+/*
+int	main(void)
+{
+	printf("%d", ft_iterative_factorial(5));
+	
+}*/
