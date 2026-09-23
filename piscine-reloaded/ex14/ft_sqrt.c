@@ -6,7 +6,7 @@
 /*   By: alsadyko <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/22 21:26:26 by alsadyko          #+#    #+#             */
-/*   Updated: 2026/09/22 21:46:24 by alsadyko         ###   ########.fr       */
+/*   Updated: 2026/09/23 21:09:25 by alsadyko         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include <stdio.h>
@@ -27,8 +27,8 @@ int	ft_sqrt(int nb)
 	else
 		return (0);
 }
-/*
+
 int	main(void)
 {
 	printf("%d", ft_sqrt(144));
-}*/
+}
