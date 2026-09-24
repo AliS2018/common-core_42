@@ -6,7 +6,7 @@
 /*   By: alsadyko <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/23 16:00:14 by alsadyko          #+#    #+#             */
-/*   Updated: 2026/09/24 18:47:51 by alsadyko         ###   ########.fr       */
+/*   Updated: 2026/09/24 19:09:58 by alsadyko         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,9 +26,4 @@ int	ft_strcmp(char *s1, char *s2)
 	if (s1[i] > s2[i])
 		return (1);
 	return (0);
-}
-
-int	main(void)
-{
-	printf("%d", ft_strcmp("HELLOo", "HELLO"));
 }
