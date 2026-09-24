@@ -6,7 +6,7 @@
 /*   By: alsadyko <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/23 19:37:53 by alsadyko          #+#    #+#             */
-/*   Updated: 2026/09/24 18:45:09 by alsadyko         ###   ########.fr       */
+/*   Updated: 2026/09/24 19:11:03 by alsadyko         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include <stdlib.h>
@@ -41,18 +41,3 @@ char	*ft_strdup(char *src)
 	new_str[i] = '\0';
 	return (new_str);
 }
-/*
-int	main(void)
-{
-	char	*original;
-	char	*copy;
-
-	original = "sussy baka";
-	copy = ft_strdup(original);
-
-	if (copy == NULL)
-		return (1);
-
-	free(copy);
-	return (0);
-}*/

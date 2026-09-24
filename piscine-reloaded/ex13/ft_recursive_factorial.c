@@ -6,7 +6,7 @@
 /*   By: alsadyko <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/22 21:17:52 by alsadyko          #+#    #+#             */
-/*   Updated: 2026/09/24 18:49:49 by alsadyko         ###   ########.fr       */
+/*   Updated: 2026/09/24 19:08:57 by alsadyko         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,9 +29,4 @@ int	ft_recursive_factorial(int nb)
 	{
 		return (nb * max);
 	}
-}
-
-int	main(void)
-{
-	printf("%d", ft_recursive_factorial(5));
 }
