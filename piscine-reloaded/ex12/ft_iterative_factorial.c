@@ -6,7 +6,7 @@
 /*   By: alsadyko <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/22 19:48:41 by alsadyko          #+#    #+#             */
-/*   Updated: 2026/09/22 21:17:01 by alsadyko         ###   ########.fr       */
+/*   Updated: 2026/09/24 18:48:35 by alsadyko         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,15 +22,20 @@ int	ft_iterative_factorial(int nb)
 		return (0);
 	while (nb > 1)
 	{
-		i = i * nb;
-		nb--;
+		if (i > 2147483647 / nb)
+		{
+			return (0);
+		}
+		else
+		{
+			i = i * nb;
+			nb--;
+		}
 	}
 	return (i);
 }
 
-/*
 int	main(void)
 {
 	printf("%d", ft_iterative_factorial(5));
-	
-}*/
+}
