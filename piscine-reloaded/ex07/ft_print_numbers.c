@@ -6,16 +6,13 @@
 /*   By: alsadyko <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/21 18:41:12 by alsadyko          #+#    #+#             */
-/*   Updated: 2026/09/23 21:05:05 by alsadyko         ###   ########.fr       */
+/*   Updated: 2026/09/24 19:07:53 by alsadyko         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-void	ft_putchar(char c)
-{
-	write(1, &c, 1);
-}
+void	ft_putchar(char c);
 
 void	ft_print_numbers(void)
 {
@@ -29,10 +26,4 @@ void	ft_print_numbers(void)
 		ft_putchar(c);
 		n++;
 	}
-}
-
-int	main(void)
-{
-	ft_print_numbers();
-	return (0);
 }

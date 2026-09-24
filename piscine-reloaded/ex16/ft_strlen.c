@@ -6,7 +6,7 @@
 /*   By: alsadyko <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/23 15:56:09 by alsadyko          #+#    #+#             */
-/*   Updated: 2026/09/23 21:10:09 by alsadyko         ###   ########.fr       */
+/*   Updated: 2026/09/24 19:09:47 by alsadyko         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,9 +20,4 @@ int	ft_strlen(char *str)
 	while (str[i] != '\0')
 		i++;
 	return (i);
-}
-
-int	main(void)
-{
-	printf("%d", ft_strlen("Hello"));
 }
