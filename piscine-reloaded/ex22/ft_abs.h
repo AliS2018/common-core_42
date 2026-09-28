@@ -6,8 +6,8 @@
 /*   By: alsadyko <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/25 20:23:29 by alsadyko          #+#    #+#             */
-/*   Updated: 2026/09/25 20:23:38 by alsadyko         ###   ########.fr       */
+/*   Updated: 2026/09/28 17:59:50 by alsadyko         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#define ABS(value)
+#define ABS(Value) (((Value) < 0) ? -(Value): (Value))
