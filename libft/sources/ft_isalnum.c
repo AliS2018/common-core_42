@@ -6,8 +6,28 @@
 /*   By: alsadyko <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/29 21:00:49 by alsadyko          #+#    #+#             */
-/*   Updated: 2026/09/29 21:00:52 by alsadyko         ###   ########.fr       */
+/*   Updated: 2026/09/30 01:03:34 by alsadyko         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+#include <stdio.h>
+int	ft_isalnum(int c)
+{
+	if (((c >= 65 && c <= 90) || (c >= 97 && c <= 122)) || (c >= 48 && c <= 57))
+		return (1);
+	return (0);
+}
+int	main(int argc, char **argv)
+{
+	int	j;
 
+	j = 0;
+	if (argc == 2)
+	{
+		while (argv[1][j] != '\0')
+		{
+			printf("%d\n", ft_isalnum(argv[1][j]));
+			j++;
+		}
+	}
+}
 
