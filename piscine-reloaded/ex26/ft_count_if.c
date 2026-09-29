@@ -6,23 +6,21 @@
 /*   By: alsadyko <alsadyko@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/29 13:56:28 by alsadyko          #+#    #+#             */
-/*   Updated: 2026/09/29 18:25:35 by alsadyko         ###   ########.fr       */
+/*   Updated: 2026/09/29 18:31:27 by alsadyko         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-int     ft_count_if(char **tab, int(*f)(char*))
+int	ft_count_if(char **tab, int(*f)(char*))
 {
-        int     i;
-        int     count;
+	int	i;
+	int	count;
 
-        i = 0;
-        count = 0;
-        while (tab[i] != 0)
-        {
-                if(f(tab[i]) == 1)
-                        count++;
-                i++;
-        }
-        return (count);
+	i = 0;
+	count = 0;
+	while (tab[i] != 0)
+	{
+		if (f(tab[i]) == 1)
+			count++;
+		i++;
+	}
+	return (count);
 }
-
-
