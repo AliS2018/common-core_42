@@ -6,18 +6,18 @@
 /*   By: alsadyko <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/30 13:52:50 by alsadyko          #+#    #+#             */
-/*   Updated: 2026/09/30 13:56:10 by alsadyko         ###   ########.fr       */
+/*   Updated: 2026/09/30 16:44:27 by alsadyko         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 size_t ft_strlen(const char *s)
 {
-	int	i;
+	size_t	i;
 
 	i = 0;
 	while (s[i] != '\0')
 	{
 		i++;
 	}
-	return(i);
+	return (i);
 }
