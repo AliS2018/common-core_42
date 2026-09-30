@@ -6,7 +6,7 @@
 /*   By: alsadyko <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/30 19:24:00 by alsadyko          #+#    #+#             */
-/*   Updated: 2026/09/30 20:07:31 by alsadyko         ###   ########.fr       */
+/*   Updated: 2026/09/30 20:17:02 by alsadyko         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 
 void	test_isalpha(void)
 {
+
 	printf("isalpha A: %d\n", ft_isalpha('A'));
 	printf("isalpha 7: %d\n", ft_isalpha('7'));
 }
