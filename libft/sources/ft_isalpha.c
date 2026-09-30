@@ -1,15 +1,15 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   isalpha.c                                          :+:      :+:    :+:   */
+/*   ft_isalpha.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: alsadyko <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/29 20:02:29 by alsadyko          #+#    #+#             */
-/*   Updated: 2026/09/29 20:50:37 by alsadyko         ###   ########.fr       */
+/*   Updated: 2026/09/30 19:54:51 by alsadyko         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include <stdio.h>
+#include "libft.h"
 
 int	ft_isalpha(int c)
 {
@@ -17,7 +17,7 @@ int	ft_isalpha(int c)
 		return (1);
 	return (0);
 }
-
+/*
 int	main(int argc, char **argv)
 {
 	int	j;
@@ -31,4 +31,4 @@ int	main(int argc, char **argv)
 			j++;
 		}
 	}
-}
+}*/

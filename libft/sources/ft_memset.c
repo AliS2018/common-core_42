@@ -6,9 +6,10 @@
 /*   By: alsadyko <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/30 16:47:13 by alsadyko          #+#    #+#             */
-/*   Updated: 2026/09/30 18:43:22 by alsadyko         ###   ########.fr       */
+/*   Updated: 2026/09/30 19:59:11 by alsadyko         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+#include "libft.h"
 
 void *ft_memset(void *s, int c, size_t n)
 {
@@ -24,7 +25,8 @@ void *ft_memset(void *s, int c, size_t n)
 	}
 	return (s);
 }
-#include <stdio.h>
+
+/*#include <stdio.h>
 int     main(int argc, char **argv)
 {
         int     j;
@@ -41,4 +43,4 @@ int     main(int argc, char **argv)
                 }
         }
 }
-
+*/
