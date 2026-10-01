@@ -6,7 +6,7 @@
 /*   By: alsadyko <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/30 19:24:00 by alsadyko          #+#    #+#             */
-/*   Updated: 2026/09/30 20:17:02 by alsadyko         ###   ########.fr       */
+/*   Updated: 2026/10/01 21:22:49 by alsadyko         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,6 @@
 
 void	test_isalpha(void)
 {
-
 	printf("isalpha A: %d\n", ft_isalpha('A'));
 	printf("isalpha 7: %d\n", ft_isalpha('7'));
 }
@@ -30,7 +29,6 @@ void	test_memset(void)
 	size_t	i;
 
 	ft_memset(buf, 'Z', 5);
-	
 	i = 0;
 	while (i < 5)
 	{

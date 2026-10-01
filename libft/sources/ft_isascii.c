@@ -6,17 +6,18 @@
 /*   By: alsadyko <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/30 13:44:30 by alsadyko          #+#    #+#             */
-/*   Updated: 2026/09/30 13:48:48 by alsadyko         ###   ########.fr       */
+/*   Updated: 2026/10/01 20:34:53 by alsadyko         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include <stdio.h>
+#include "libft.h"
+
 int	ft_isascii(int c)
 {
 	if (c >= 0 && c <= 127)
 		return (1);
 	return (0);
 }
-
+/*
 int	main(int argc, char **argv)
 {
 	int	j;
@@ -31,4 +32,4 @@ int	main(int argc, char **argv)
 		}
 	}
 }
-
+*/

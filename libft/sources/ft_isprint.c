@@ -6,9 +6,10 @@
 /*   By: alsadyko <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/30 13:52:07 by alsadyko          #+#    #+#             */
-/*   Updated: 2026/09/30 16:39:39 by alsadyko         ###   ########.fr       */
+/*   Updated: 2026/10/01 21:15:41 by alsadyko         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+#include "libft.h"
 
 int	ft_isprint(int c)
 {
@@ -16,7 +17,7 @@ int	ft_isprint(int c)
 		return (1);
 	return (0);
 }
-
+/*
 #include <stdio.h>
 int     main(int argc, char **argv)
 {
@@ -32,4 +33,4 @@ int     main(int argc, char **argv)
                 }
         }
 }
-
+*/

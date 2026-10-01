@@ -6,16 +6,18 @@
 /*   By: alsadyko <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/29 21:00:49 by alsadyko          #+#    #+#             */
-/*   Updated: 2026/09/30 01:03:34 by alsadyko         ###   ########.fr       */
+/*   Updated: 2026/10/01 20:35:33 by alsadyko         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include <stdio.h>
+#include "libft.h"
+
 int	ft_isalnum(int c)
 {
 	if (((c >= 65 && c <= 90) || (c >= 97 && c <= 122)) || (c >= 48 && c <= 57))
 		return (1);
 	return (0);
 }
+/*
 int	main(int argc, char **argv)
 {
 	int	j;
@@ -30,4 +32,4 @@ int	main(int argc, char **argv)
 		}
 	}
 }
-
+*/

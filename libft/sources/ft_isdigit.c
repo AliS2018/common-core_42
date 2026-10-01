@@ -6,10 +6,10 @@
 /*   By: alsadyko <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/29 20:51:23 by alsadyko          #+#    #+#             */
-/*   Updated: 2026/09/29 20:55:05 by alsadyko         ###   ########.fr       */
+/*   Updated: 2026/10/01 20:34:00 by alsadyko         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include <stdio.h>
+#include "libft.h"
 
 int	ft_isdigit(int c)
 {
@@ -17,7 +17,7 @@ int	ft_isdigit(int c)
 		return (1);
 	return (0);
 }
-
+/*
 int	main(int argc, char **argv)
 {
 	int	j;
@@ -32,4 +32,4 @@ int	main(int argc, char **argv)
 		}
 	}
 }
-
+*/

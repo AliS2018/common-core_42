@@ -6,12 +6,12 @@
 /*   By: alsadyko <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/30 13:52:50 by alsadyko          #+#    #+#             */
-/*   Updated: 2026/09/30 19:54:39 by alsadyko         ###   ########.fr       */
+/*   Updated: 2026/10/01 20:33:28 by alsadyko         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
 
-size_t ft_strlen(const char *s)
+size_t	ft_strlen(const char *s)
 {
 	size_t	i;
 
