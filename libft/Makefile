@@ -1,6 +1,7 @@
 .PHONY: test fclean
 SRC := sources/ft_strlen.c \
        sources/ft_isalpha.c \
+       sources/ft_isalnum.c \
        sources/ft_memset.c 
 INCLUDES := -I includes/
 TEST := tests/main.c
