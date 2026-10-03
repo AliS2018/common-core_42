@@ -2,6 +2,9 @@
 SRC := sources/ft_strlen.c \
        sources/ft_isalpha.c \
        sources/ft_isalnum.c \
+       sources/ft_isdigit.c \
+       sources/ft_isprint.c \
+       sources/ft_isascii.c \
        sources/ft_memset.c 
 INCLUDES := -I includes/
 TEST := tests/main.c
