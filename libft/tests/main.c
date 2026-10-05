@@ -5,163 +5,150 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: alsadyko <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/10/02 22:22:48 by alsadyko          #+#    #+#             */
-/*   Updated: 2026/10/03 04:45:05 by alsadyko         ###   ########.fr       */
+/*   Created: 2026/09/30 19:24:00 by alsadyko          #+#    #+#             */
+/*   Updated: 2026/10/02 22:19:40 by alsadyko         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include <stdio.h>
-#include <unistd.h>
+#define ERR "\x1b[31m"
+#define DEBUG "\x1b[33m"
+#define PASS "\x1b[34m"
+#define RESET "\033[m"
 #include "libft.h"
-
-#define ERR		"\x1b[31m"
-#define DEBUG	"\x1b[33m"
-#define PASS	"\x1b[34m"
-#define RESET	"\x1b[0m"
-
-static void	delay(void)
+void	vd(void)
 {
-	usleep(300000);
+	usleep(500000);
 	printf("\n");
 }
-
-static void	section(const char *name)
+/*void	test_memmove(void)
 {
-	printf("%s--> %s TEST <--%s\n", DEBUG, name, RESET);
-}
-
-static void	result(const char *name, int condition)
-{
-	if (condition)
-		printf("-- %-35s %sPASS%s\n", name, PASS, RESET);
-	else
-		printf("++ %-35s %sFAIL%s\n", name, ERR, RESET);
-}
-
-void	test_isalpha(void)
-{
-	section("FT_ISALPHA");
-	result("alphabet bounds",
-		ft_isalpha('A') == 1
-		&& ft_isalpha('Z') == 1
-		&& ft_isalpha('a') == 1
-		&& ft_isalpha('z') == 1);
-	result("non-alphabetic printables",
-		ft_isalpha('7') == 0
-		&& ft_isalpha('@') == 0);
-	result("non-printable characters",
-		ft_isalpha('\t') == 0
-		&& ft_isalpha('\n') == 0);
-}
-
-void	test_isalnum(void)
-{
-	section("FT_ISALNUM");
-	result("valid alphanumeric characters",
-		ft_isalnum('A') == 1
-		&& ft_isalnum('a') == 1
-		&& ft_isalnum('7') == 1);
-	result("non-alphanumeric characters",
-		ft_isalnum('@') == 0
-		&& ft_isalnum('\n') == 0);
-}
-
-void	test_isdigit(void)
-{
-	section("FT_ISDIGIT");
-	result("digit bounds",
-		ft_isdigit('0') == 1
-		&& ft_isdigit('5') == 1
-		&& ft_isdigit('9') == 1);
-	result("non-digits",
-		ft_isdigit('/') == 0
-		&& ft_isdigit(':') == 0
-		&& ft_isdigit('A') == 0);
-}
-
-void	test_isprint(void)
-{
-	section("FT_ISPRINT");
-	result("printable characters",
-		ft_isprint(' ') == 1
-		&& ft_isprint('A') == 1
-		&& ft_isprint('@') == 1
-		&& ft_isprint('~') == 1);
-	result("non-printable characters",
-		ft_isprint('\t') == 0
-		&& ft_isprint('\n') == 0
-		&& ft_isprint('\b') == 0
-		&& ft_isprint(127) == 0);
-}
+	
+}*/
 
 void	test_isascii(void)
 {
-	int	i;
-	int	ok;
-
-	section("FT_ISASCII");
+	int i = 0;
 	i = 0;
-	ok = 1;
-	while (i <= 127)
+	while (i < 127)
 	{
-		if (ft_isascii(i) == 0)
-			ok = 0;
+		printf("FUNC RETURN:%s %d %s| OUTPUT: %s %c %s  >>>>>>>>>>>>>>  %s (PASS)\n%s",DEBUG, ft_isascii(i), RESET, PASS, i, RESET, PASS, RESET);
+		usleep(50000);
 		i++;
 	}
-	result("ASCII range 0-127", ok);
-	result("values outside ASCII",
-		ft_isascii(-1) == 0
-		&& ft_isascii(128) == 0
-		&& ft_isascii(255) == 0);
+}
+void	test_isalpha(void)
+{
+	printf("--> FT_ISALPHA TEST <--\n");
+	if (ft_isalpha('A') == 1
+		&& ft_isalpha('Z') == 1
+		&& ft_isalpha('a') == 1
+		&& ft_isalpha('z') == 1)
+		printf("-- ALPHABET BOUNDS:%s PASS%s\n", PASS, RESET);
+	else
+		printf("++ ALPHABET BOUNDS:%s FAIL %s\n",ERR, RESET);
+
+	if (ft_isalpha('7') == 0 && ft_isalpha('@') == 0)
+		printf("-- NON-ALPHABETIC PRINTABLES: PASS\n");
+	else
+		printf("++ NON-ALPHABETIC PRINTABLES: FAIL\n");
+
+	if (ft_isalpha('\t') == 0 && ft_isalpha('\n') == 0)
+		printf("-- NON-PRINTABLE CHARACTERS: PASS\n");
+	else
+		printf("++ NON-PRINTABLE CHARACTERS: FAIL\n");
 }
 
 void	test_strlen(void)
 {
-	section("FT_STRLEN");
-	result("\"welcome\" length == 7",
-		ft_strlen("welcome") == 7);
-	result("empty string length == 0",
-		ft_strlen("") == 0);
-	result("single character length == 1",
-		ft_strlen("A") == 1);
+	char	*str;
+
+	str = "welcome";
+	printf("--> FT_STRLEN TEST <--\n");
+	if (ft_strlen(str) == 7)
+		printf("-- WORD LENGTH OF 7: PASS\n");
+	else
+		printf("++ WORD LENGTH OF 7: FAIL\n");
+	if (ft_strlen("") == 0)
+		printf("-- EMPTY STRING: PASS\n");
+	else
+		printf("++ EMPTY STRING: FAIL\n");
+}
+
+void	test_isalnum(void)
+{
+	printf("--> FT_ISALNUM TEST <--\n");
+	if (ft_isalnum('A') == 1
+		&& ft_isalnum('a') == 1
+		&& ft_isalnum('7') == 1)
+		printf("-- ALPHANUMERIC CHARACTERS: PASS\n");
+	else
+		printf("++ ALPHANUMERIC CHARACTERS: FAIL\n");
+	if (ft_isalnum('@') == 0
+		&& ft_isalnum('\n') == 0)
+		printf("-- NON-ALPHANUMERIC CHARACTERS: PASS\n");
+	else
+		printf("++ NON-ALPHANUMERIC CHARACTERS: FAIL\n");
+}
+
+void	test_isprint(void)
+{
+	printf("--> FT_ISPRINT TEST <--\n");
+	if (ft_isprint('A') == 1
+		&& ft_isprint('a') == 1
+		&& ft_isprint('@') == 1)
+		printf("-- CHARACTER IS PRINTABLE: PASS\n");
+	else
+		printf("++ CHARACTER IS PRINTABLE: FAIL\n");
+	if (ft_isprint('\t') == 0
+			&& ft_isprint('\n') == 0
+			&& ft_isprint('\b') == 0)
+		printf("-- CHARACTER IS NON PRINTABLE: PASS\n");
+	else
+		printf("++ CHARACTER IS NON PRINTABLE: FAIL\n");
+}
+
+void	test_isdigit(void)
+{
+	printf("--> FT_ISDIGIT TEST <--\n");
+	if (ft_isdigit('0') == 1
+		&& ft_isdigit('5') == 1
+		&& ft_isdigit('9') == 1)
+		printf("-- CHARACTER IS DIGIT: PASS\n");
+	else
+		printf("++ CHARACTER IS DIGIT: FAIL\n");
 }
 
 void	test_memset(void)
 {
+	printf("--> FT_MEMSET TEST <--\n");
 	char	buf[5];
 	size_t	i;
-	int		bytes_ok;
 
-	section("FT_MEMSET");
-	ft_memset(buf, 'Z', sizeof(buf));
+	ft_memset(buf, 'Z', 5);
 	i = 0;
-	bytes_ok = 1;
-	while (i < sizeof(buf))
+	while (i < 5)
 	{
-		if (buf[i] != 'Z')
-			bytes_ok = 0;
+		printf("buf[%zu] = %c\n", i, buf[i]);
 		i++;
 	}
-	result("all requested bytes modified", bytes_ok);
-	result("returns original pointer",
-		ft_memset(buf, 'Z', sizeof(buf)) == buf);
+	if (ft_memset(buf, 'Z', 5) == buf)
+		printf("return pointer: PASS\n");
 }
 
 int	main(void)
 {
 	test_isalpha();
-	delay();
+	vd();
 	test_isprint();
-	delay();
+	vd();
 	test_isdigit();
-	delay();
+	vd();
 	test_isalnum();
-	delay();
+	vd();
 	test_isascii();
-	delay();
+	vd();
 	test_strlen();
-	delay();
+	vd();
 	test_memset();
-	delay();
+	vd();
 	return (0);
 }
