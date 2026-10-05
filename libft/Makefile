@@ -12,11 +12,11 @@ COMPILER := cc -Wall -Werror -Wextra
 TEST_RUNNER := runtst
 
 test:
-	@echo "|		TEST IN PROGRESS		|"
+	@echo "|TEST IN PROGRESS|"
 	@sleep 1
-	${COMPILER} ${TEST} ${SRC} ${INCLUDES} -o ${TEST_RUNNER}
+	@${COMPILER} ${TEST} ${SRC} ${INCLUDES} -o ${TEST_RUNNER}
 	./${TEST_RUNNER}
-	@echo "				DONE			" 
+	@echo "DONE" 
 fclean:
 	@echo "Removing unused binaries..."
 	@rm -fv ${TEST_RUNNER}
