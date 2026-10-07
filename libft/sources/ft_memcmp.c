@@ -6,7 +6,7 @@
 /*   By: alsadyko <alsadyko@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/05 23:08:06 by alsadyko          #+#    #+#             */
-/*   Updated: 2026/10/05 23:22:48 by alsadyko         ###   ########.fr       */
+/*   Updated: 2026/10/07 19:47:40 by alsadyko         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,14 +14,14 @@
 
 int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {
-	size_t	i;
+	size_t				i;
 	const unsigned char	*addr1;
 	const unsigned char	*addr2;
 
 	addr1 = s1;
 	addr2 = s2;
 	i = 0;
-	while (i < n )
+	while (i < n)
 	{
 		if (addr1[i] != addr2[i])
 			return (addr1[i] - addr2[i]);
