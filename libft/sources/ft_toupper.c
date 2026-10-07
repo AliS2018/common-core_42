@@ -6,12 +6,12 @@
 /*   By: alsadyko <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/03 03:44:41 by alsadyko          #+#    #+#             */
-/*   Updated: 2026/10/05 20:38:17 by alsadyko         ###   ########.fr       */
+/*   Updated: 2026/10/07 19:42:44 by alsadyko         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
 
-int 	ft_toupper(int c)
+int	ft_toupper(int c)
 {
 	if (c >= 97 && c <= 122)
 		return (c - 32);

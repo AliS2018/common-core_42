@@ -6,7 +6,7 @@
 /*   By: alsadyko <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/03 00:31:47 by alsadyko          #+#    #+#             */
-/*   Updated: 2026/10/03 03:43:21 by alsadyko         ###   ########.fr       */
+/*   Updated: 2026/10/07 19:52:38 by alsadyko         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
@@ -20,7 +20,6 @@ size_t	ft_strlcat(char *dst, const char *src, size_t siz)
 	s = 0;
 	d = 0;
 	i = 0;
-	
 	while (d < siz && dst[d])
 		d++;
 	while (src[s])

@@ -6,7 +6,7 @@
 /*   By: alsadyko <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/03 03:55:32 by alsadyko          #+#    #+#             */
-/*   Updated: 2026/10/03 04:23:58 by alsadyko         ###   ########.fr       */
+/*   Updated: 2026/10/07 19:41:38 by alsadyko         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,5 +26,4 @@ char	*ft_strchr(const char *s, int c)
 	if (c == '\0')
 		return ((char *)s + i);
 	return (NULL);
-
 }
