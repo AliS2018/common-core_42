@@ -6,7 +6,7 @@
 /*   By: alsadyko <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/08 20:46:17 by alsadyko          #+#    #+#             */
-/*   Updated: 2026/10/09 14:52:15 by alsadyko         ###   ########.fr       */
+/*   Updated: 2026/10/09 20:49:44 by alsadyko         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,20 +16,22 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
 	char	*ptr;
 	size_t	i;
-	size_t	s_len;
+	size_t	ptr_str_len;
+	size_t	mod_str_len;
 
 	if (s == NULL)
 		return (NULL);
-
-	s_len = ft_strlen(s);
-
-	i = 0;
-	ptr = malloc(len + 1 * sizeof(char));
-	
+	ptr_str_len = ft_strlen(s);
+	if (start >= ptr_str_len)
+		return (ft_strdup(""));
+	mod_str_len = ptr_str_len - start;
+	if (mod_str_len > len)
+		mod_str_len = len;
+	ptr = malloc(mod_str_len + 1);
 	if (ptr == NULL)
 		return (NULL);
-	
-	while (i < len)
+	i = 0;
+	while (i < mod_str_len)
 	{
 		ptr[i] = s[start + i];
 		i++;
@@ -37,3 +39,12 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	ptr[i] = '\0';
 	return (ptr);
 }
+/*
+int	main(void)
+{
+	char	*ptr;
+
+	ptr  = "SUPERCALIFRAGILISTICEXPIALIDOCIOUS";
+
+	printf("%s\n", ft_substr(ptr, 5, 15));
+}*/
