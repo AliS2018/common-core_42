@@ -6,7 +6,7 @@
 /*   By: alsadyko <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/30 19:29:27 by alsadyko          #+#    #+#             */
-/*   Updated: 2026/10/07 20:38:01 by alsadyko         ###   ########.fr       */
+/*   Updated: 2026/10/09 19:47:04 by alsadyko         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,6 +34,7 @@ char		*ft_strchr(const char *s, int c);
 int		ft_strncmp(const char *s1, const char *s2, size_t n);
 size_t			ft_strlcpy(char *dst, const char *src, size_t siz);
 size_t			ft_strlcat(char *dst, const char *src, size_t siz);
+char		*ft_strdup(const char *s);
 
 /* MEMORY OPERATIONS */
 void			*ft_memcpy(void *dest, const void *src, size_t n);
