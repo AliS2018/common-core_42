@@ -6,7 +6,7 @@
 /*   By: alsadyko <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/30 19:24:00 by alsadyko          #+#    #+#             */
-/*   Updated: 2026/10/02 22:19:40 by alsadyko         ###   ########.fr       */
+/*   Updated: 2026/10/10 21:21:00 by alsadyko         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #define ERR "\x1b[31m"
@@ -134,6 +134,15 @@ void	test_memset(void)
 		printf("return pointer: PASS\n");
 }
 
+void	test_strlcat(void)
+{
+	char	a[20] = "HOLA";
+	char	b[20] = "HOLA";
+	char	*src = "ADIOS";
+
+	printf("ft:   %zu \"%s\"\n", ft_strlcat(a, src, 8), a);
+	printf("real: %zu \"%s\"\n", strlcat(b, src, 8), b);
+}
 int	main(void)
 {
 	test_isalpha();
@@ -149,6 +158,8 @@ int	main(void)
 	test_strlen();
 	vd();
 	test_memset();
+	vd();
+	test_strlcat();
 	vd();
 	return (0);
 }

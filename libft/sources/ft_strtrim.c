@@ -6,11 +6,19 @@
 /*   By: alsadyko <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/10 16:54:04 by alsadyko          #+#    #+#             */
-/*   Updated: 2026/10/10 18:00:18 by alsadyko         ###   ########.fr       */
+/*   Updated: 2026/10/10 21:02:32 by alsadyko         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 char	*ft_strtrim(char const *s1, char const *set)
 {
+	int	i;
+	int	j;
+	char	*ptr;
+
+	if (!s1 || !set)
+	return (NULL);
 	
+	ptr = 
+	while
 }
