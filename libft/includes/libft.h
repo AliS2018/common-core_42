@@ -6,7 +6,7 @@
 /*   By: alsadyko <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/30 19:29:27 by alsadyko          #+#    #+#             */
-/*   Updated: 2026/10/09 19:47:04 by alsadyko         ###   ########.fr       */
+/*   Updated: 2026/10/10 21:15:19 by alsadyko         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@
 # include <fcntl.h>
 # include <stdio.h>
 # include <stdlib.h>
+# include <bsd/string.h>
 
 /* CHAR CHECKS & CONVERSION */
 int				ft_toupper(int c);
