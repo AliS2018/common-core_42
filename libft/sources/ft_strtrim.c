@@ -6,7 +6,7 @@
 /*   By: alsadyko <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/10 16:54:04 by alsadyko          #+#    #+#             */
-/*   Updated: 2026/10/13 15:23:11 by alsadyko         ###   ########.fr       */
+/*   Updated: 2026/10/13 17:18:54 by alsadyko         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
@@ -14,7 +14,7 @@
 static size_t	str_start(char const *str, char const *set)
 {
 	size_t	i;
-	
+
 	i = 0;
 	while (str[i] != '\0' && ft_strchr(set, str[i]) != NULL)
 	{
@@ -22,6 +22,7 @@ static size_t	str_start(char const *str, char const *set)
 	}
 	return (i);
 }
+
 static size_t	str_end(char const *str, char const *set, size_t start)
 {
 	size_t	i;
@@ -33,18 +34,18 @@ static size_t	str_end(char const *str, char const *set, size_t start)
 	}
 	return (i);
 }
+
 char	*ft_strtrim(char const *s1, char const *set)
 {
-	size_t	start;
-	size_t	end;
-	size_t	i;
-	char	*ptr;
+	size_t		start;
+	size_t		end;
+	size_t		i;
+	char		*ptr;
 
 	if (!s1 || !set)
-	return (NULL);
+		return (NULL);
 	start = str_start(s1, set);
 	end = str_end(s1, set, start);
-
 	ptr = malloc(((end - start) + 1) * sizeof(char));
 	if (!ptr)
 		return (NULL);
@@ -55,12 +56,11 @@ char	*ft_strtrim(char const *s1, char const *set)
 		i++;
 	}
 	ptr[i] = '\0';
-
 	return (ptr);
 }
-
+/*
 int	main(void)
 {
 	char	*var = "@@@@@@ Hello Suckaaa @@@@@";
 	printf("%s\n", ft_strtrim(var, "@ "));
-}
+}*/
