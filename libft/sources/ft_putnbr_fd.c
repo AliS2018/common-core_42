@@ -6,7 +6,7 @@
 /*   By: alsadyko <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/10 18:51:01 by alsadyko          #+#    #+#             */
-/*   Updated: 2026/10/10 20:01:50 by alsadyko         ###   ########.fr       */
+/*   Updated: 2026/10/13 17:15:52 by alsadyko         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 void	ft_putnbr_fd(int n, int fd)
 {
 	char	*nb;
+
 	nb = ft_itoa(n);
 	ft_putstr_fd(nb, fd);
 	free(nb); 

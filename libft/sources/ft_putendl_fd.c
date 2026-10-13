@@ -6,7 +6,7 @@
 /*   By: alsadyko <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/10 18:40:24 by alsadyko          #+#    #+#             */
-/*   Updated: 2026/10/10 18:50:03 by alsadyko         ###   ########.fr       */
+/*   Updated: 2026/10/13 17:15:30 by alsadyko         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 void	ft_putendl_fd(char *s, int fd)
 {
 	if (s == NULL)
-		return;
+		return (NULL);
 	ft_putstr_fd(s, fd);
 	ft_putchar_fd('\n', fd);
 }
