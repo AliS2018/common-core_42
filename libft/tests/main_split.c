@@ -6,7 +6,7 @@
 /*   By: alsadyko <alsadyko@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/14 00:14:34 by alsadyko          #+#    #+#             */
-/*   Updated: 2026/10/14 15:47:54 by alsadyko         ###   ########.fr       */
+/*   Updated: 2026/10/14 23:11:37 by alsadyko         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,17 +20,19 @@ static void	test(char const *s, char c)
 	res = ft_split(s,c);
 	if (!res)
 	{
-		printf("	NULL\n\n");
+		printf("NULL\n\n");
 		return ;
 	}
 	i = 0;
+	
 	while (res[i])
 	{
-		printf(" [%zu] [%s] \n", i, res[i]);
+		printf("%s ", res[i]);
 		free(res[i]);
 		i++;
 	}
 	printf(" words: %zu\n\n", i);
+	
 	free(res);
 }
 
