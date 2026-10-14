@@ -6,7 +6,7 @@
 /*   By: alsadyko <alsadyko@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/14 00:14:34 by alsadyko          #+#    #+#             */
-/*   Updated: 2026/10/14 00:21:00 by alsadyko         ###   ########.fr       */
+/*   Updated: 2026/10/14 15:47:54 by alsadyko         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,5 +42,6 @@ int	main(void)
 	test("abc", ',');
 	test("  hello  world  ", ' ');
 	test("a,b,c", ',');
+	test("SUPER|CALI|FRAGILISTIC|EXPIA|LI|DOCIOUS|SERPENDICIOUSLY|EV|IL|SUKRE",  '|');
 	return (0);	
 }

@@ -6,8 +6,13 @@
 /*   By: alsadyko <alsadyko@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/14 02:39:56 by alsadyko          #+#    #+#             */
-/*   Updated: 2026/10/14 02:39:57 by alsadyko         ###   ########.fr       */
+/*   Updated: 2026/10/14 15:51:57 by alsadyko         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
 
+char	*ft_itoa(int n)
+{
+
+}
