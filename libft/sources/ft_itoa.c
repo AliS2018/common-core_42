@@ -6,14 +6,16 @@
 /*   By: alsadyko <alsadyko@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/14 02:39:56 by alsadyko          #+#    #+#             */
-/*   Updated: 2026/10/14 23:22:39 by alsadyko         ###   ########.fr       */
+/*   Updated: 2026/10/15 18:16:59 by alsadyko         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
 static	int	ft_counter(long n)
 {
 	int	i;
+
 	i = 1;
 	if (n < 0)
 	{
