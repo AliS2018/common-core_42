@@ -6,7 +6,7 @@
 /*   By: alsadyko <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/30 19:29:27 by alsadyko          #+#    #+#             */
-/*   Updated: 2026/10/15 20:14:22 by alsadyko         ###   ########.fr       */
+/*   Updated: 2026/10/15 21:58:32 by alsadyko         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,6 +49,7 @@ char	**ft_split(char const *s, char c);
 void	*ft_calloc(size_t nmemb, size_t size);
 char	*ft_itoa(int n);
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
+void    ft_striteri(char *s, void (*f)(unsigned int, char *));
 
 typedef struct	s_list
 {
