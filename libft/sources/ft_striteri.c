@@ -6,10 +6,22 @@
 /*   By: alsadyko <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/14 15:52:11 by alsadyko          #+#    #+#             */
-/*   Updated: 2026/10/14 15:52:41 by alsadyko         ###   ########.fr       */
+/*   Updated: 2026/10/15 21:46:17 by alsadyko         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 void	ft_striteri(char *s, void (*f)(unsigned int, char *))
 {
+	unsigned int	i;
+
+	if (!s || !f)
+		return;
+
+	i = 0;
+	while (s[i])
+	{
+		f(i, s[i]);
+		i++;
+	}
+	return;
 }
