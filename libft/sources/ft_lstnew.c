@@ -6,7 +6,7 @@
 /*   By: alsadyko <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/15 22:22:43 by alsadyko          #+#    #+#             */
-/*   Updated: 2026/10/15 22:31:41 by alsadyko         ###   ########.fr       */
+/*   Updated: 2026/10/16 19:36:58 by alsadyko         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,9 @@
 
 t_list	*ft_lstnew(void *content)
 {
-	char	*ptr;
+	t_list	*ptr;
 
-	ptr = malloc(conett
+	ptr = malloc(sizeof(t_list))
+	if (!ptr)
+		return (NULL);
 }
