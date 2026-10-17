@@ -6,7 +6,7 @@
 /*   By: alsadyko <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/30 19:29:27 by alsadyko          #+#    #+#             */
-/*   Updated: 2026/10/16 21:12:38 by alsadyko         ###   ########.fr       */
+/*   Updated: 2026/10/17 15:43:18 by alsadyko         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,5 +67,5 @@ typedef struct	s_list
 }			t_list;
 
 t_list	*ft_lstnew(void *content);
-
+void	ft_lstclear(t_list **lst, void (*del)(void *));
 #endif
