@@ -6,7 +6,7 @@
 /*   By: alsadyko <alsadyko@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/17 07:14:05 by alsadyko          #+#    #+#             */
-/*   Updated: 2026/10/17 07:42:50 by alsadyko         ###   ########.fr       */
+/*   Updated: 2026/10/17 09:58:02 by alsadyko         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,12 +18,9 @@ void	ft_lstadd_back(t_list **lst, t_list *new)
 
 	if (!lst || !new)
 		return ;
-	
-	if (*lst == NULL)
-		*lst -> next = new;
+	last = ft_lstlast(*lst);
+	if (!last)
+		*lst = new;
 	else
-	{
-		last = *lst -> next;
- 		last = new;
-	}
+		last -> next = new;
 }
