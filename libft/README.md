@@ -71,7 +71,25 @@ This library presents with different small components that solve different parts
 ├── ft_lstnew.c
 ├── ft_lstsize.c
 ```
-## Amount of functions
-Total: 43
+## Total amount of available functions
+**43**
 ## Instructions
-to compile this library you must have installed make and the latest gcc compiler
+to compile this library you must have  make and gcc compiler installed on your system
+## Resources
+
+### References
+- Linux manual pages (`man <function>`): primary reference for the behavior of the libc functions reimplemented in this project
+- The libft subject PDF: for the required prototypes and the additional/bonus functions
+
+### Testing Tools
+- **Valgrind**: checking the allocating functions for memory leaks
+- **Francinette**: running the project against a third-party test suite
+- **LibftTester**: additional tester to see if both testing tools resulted in the same output
+- **My own tester** "not present in the repo but can be found inside workspace branch under libft"
+
+### AI Usage
+AI was used as a learning aid for concepts that were new to me:
+- **Memory allocation**: how `malloc`/`free` work and who is responsible for freeing returned memory
+- **Linked lists**: the basics of node structure and list traversal, which took the most time to understand before writing the `ft_lst*` functions
+- **Edge-case review**: `ft_split` and `ft_itoa` were reviewed with Claude Code and ChatGPT in parallel to look for edge cases that could cause memory leaks
+
