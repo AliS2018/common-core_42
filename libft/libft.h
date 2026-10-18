@@ -6,10 +6,9 @@
 /*   By: alsadyko <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/30 19:29:27 by alsadyko          #+#    #+#             */
-/*   Updated: 2026/10/17 20:16:23 by alsadyko         ###   ########.fr       */
+/*   Updated: 2026/10/17 23:35:48 by alsadyko         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
 #ifndef LIBFT_H
 # define LIBFT_H
 # include <unistd.h>
@@ -25,6 +24,7 @@ int				ft_isalnum(int c);
 int				ft_isascii(int c);
 int				ft_isdigit(int c);
 int				ft_isprint(int c);
+
 /* STRING FUNCTIONS (CONVERSION, COMPARATORS AND COPYING) */
 int				ft_atoi(const char *nptr);
 int				ft_strncmp(const char *s1, const char *s2, size_t n);
@@ -58,7 +58,7 @@ void			ft_putendl_fd(char *s, int fd);
 void			ft_putstr_fd(char *s, int fd);
 void			ft_putnbr_fd(int n, int fd);
 
-/* LISTS AND STRCUTURES */
+/* LISTS AND STRUCTURES */
 typedef struct s_list
 {
 	void			*content;
