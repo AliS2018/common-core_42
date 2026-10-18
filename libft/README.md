@@ -71,5 +71,7 @@ This library presents with different small components that solve different parts
 ├── ft_lstnew.c
 ├── ft_lstsize.c
 ```
+## Amount of functions
+Total: 43
 ## Instructions
 to compile this library you must have installed make and the latest gcc compiler
