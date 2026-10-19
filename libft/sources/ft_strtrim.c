@@ -6,7 +6,7 @@
 /*   By: alsadyko <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/10 16:54:04 by alsadyko          #+#    #+#             */
-/*   Updated: 2026/10/13 17:18:54 by alsadyko         ###   ########.fr       */
+/*   Updated: 2026/10/19 11:23:17 by alsadyko         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
@@ -58,9 +58,3 @@ char	*ft_strtrim(char const *s1, char const *set)
 	ptr[i] = '\0';
 	return (ptr);
 }
-/*
-int	main(void)
-{
-	char	*var = "@@@@@@ Hello Suckaaa @@@@@";
-	printf("%s\n", ft_strtrim(var, "@ "));
-}*/
