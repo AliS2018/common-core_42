@@ -71,10 +71,18 @@ This library presents with different small components that solve different parts
 ├── ft_lstnew.c
 ├── ft_lstsize.c
 ```
-## Total amount of available functions
+### Total amount of available functions
 **43**
+
+## Expected functions behaviour
+To understand what this project is supposed to do, we first need to understand how each function in the library behaves. This section goes into more depth on how each function works and what its purpose is. It is divided the same way as the Library Contents section, which should make it easier to explain each function's function.
+
 ## Instructions
-to compile this library you must have  make and gcc compiler installed on your system
+To compile this library you must have `make` and a `cc` compiler installed on your system
+Running  `make` or `make all` produces a static library called `libft.a`. To use it, include `libft.h` in your project and link against the archive when compiling
+```text
+    cc -Wall -Werror -Wextra main libft.a 
+```
 ## Resources
 
 ### References
@@ -85,7 +93,7 @@ to compile this library you must have  make and gcc compiler installed on your s
 - **Valgrind**: checking the allocating functions for memory leaks
 - **Francinette**: running the project against a third-party test suite
 - **LibftTester**: additional tester to see if both testing tools resulted in the same output
-- **My own tester** "not present in the repo but can be found inside workspace branch under libft"
+- **My own tester** not present in the vogsphere repo but can be found inside workspace branch under libft project in [my github](https://github.com/AliS2018/common-core_42/) or [forgejo](https://repo.md-archive.com/md-archive/common-core) repos
 
 ### AI Usage
 AI was used as a learning aid for concepts that were new to me:
