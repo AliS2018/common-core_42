@@ -6,7 +6,7 @@
 /*   By: alsadyko <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/01 20:16:59 by alsadyko          #+#    #+#             */
-/*   Updated: 2026/10/02 16:57:47 by alsadyko         ###   ########.fr       */
+/*   Updated: 2026/10/20 22:40:20 by alsadyko         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 	unsigned char				*dest_d;
 	const unsigned char			*src_s;
 
+	if (!dest && !src)
+		return (dest);
 	dest_d = dest;
 	src_s = src;
 	i = 0;
