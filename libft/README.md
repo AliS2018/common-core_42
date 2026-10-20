@@ -1,21 +1,21 @@
 *This project has been created as part of the 42 curriculum by alsadyko.*
 # LibFT
-1. [[#Description|Description]]
-2. [[#Library Contents]]
-    1. [[#Character Classification]]
-    2. [[#Character Conversion]]
-    3. [[#String Manipulation]]
-    4. [[#Memory Manipulation]]
-    5. [[#Numeric Conversion]]
-    6. [[#Output and File Descriptors]]
-    7. [[#Linked List Operations]]
-    8. [[#Total amount of available functions]]
-3. [[#Expected functions behaviour]]
-4. [[#Instructions]]
-5. [[#Resources]]
-	1. [[#References]]
-	2. [[#Testing Tools]]
-	3. [[#AI Usage]]
+1. [Description](#description)
+2. [Library Contents](#library-contents)
+    1. [Character Classification](#character-classification)
+    2. [Character Conversion](#character-conversion)
+    3. [String Manipulation](#string-manipulation)
+    4. [Memory Manipulation](#memory-manipulation)
+    5. [Numeric Conversion](#numeric-conversion)
+    6. [Output and File Descriptors](#output-and-file-descriptors)
+    7. [Linked List Operations](#linked-list-operations)
+    8. [Total amount of available functions](#total-amount-of-available-functions)
+3. [Expected functions behaviour](#expected-functions-behaviour)
+4. [Instructions](#instructions)
+5. [Resources](#resources)
+    1. [References](#references)
+    2. [Testing Tools](#testing-tools)
+    3. [AI Usage](#ai-usage)
 ## Description
 This library presents with different small components that solve different parts of problems starting with character manipulations ending with memory related stuff
 ## Library Contents
