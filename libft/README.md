@@ -1,40 +1,62 @@
 *This project has been created as part of the 42 curriculum by alsadyko.*
-# Libft
-
+# LibFT
+1. [[#Description|Description]]
+2. [[#Library Contents]]
+    1. [[#Character Classification]]
+    2. [[#Character Conversion]]
+    3. [[#String Manipulation]]
+    4. [[#Memory Manipulation]]
+    5. [[#Numeric Conversion]]
+    6. [[#Output and File Descriptors]]
+    7. [[#Linked List Operations]]
+    8. [[#Total amount of available functions]]
+3. [[#Expected functions behaviour]]
+4. [[#Instructions]]
+5. [[#Resources]]
+	1. [[#References]]
+	2. [[#Testing Tools]]
+	3. [[#AI Usage]]
 ## Description
 This library presents with different small components that solve different parts of problems starting with character manipulations ending with memory related stuff
 ## Library Contents
+This library contains a total of:
+>[!Note]43x Functions
+>1x Header
+>1x Makefile
+> 1x Readme
+## Character Classification
 
-### Character Classification
-```text
-├── ft_isalnum.c
-├── ft_isalpha.c
-├── ft_isascii.c
-├── ft_isdigit.c
-├── ft_isprint.c
-```
+| Function     | Description                                                   | Returns                    |
+| ------------ | ------------------------------------------------------------- | -------------------------- |
+| `ft_isalnum` | Checks whether a character is alphanumeric (letter or digit). | `1` if true, `0` otherwise |
+| `ft_isalpha` | Checks whether a character is an alphabetic letter.           | `1` if true, `0` otherwise |
+| `ft_isascii` | Checks whether a character is an ASCII character (0–127).     | `1` if true, `0` otherwise |
+| `ft_isdigit` | Checks whether a character is a decimal digit (`0`–`9`).      | `1` if true, `0` otherwise |
+| `ft_isprint` | Checks whether a character is printable (ASCII 32–126).       | `1` if true, `0` otherwise |
 ### Character Conversion
-```text
-├── ft_tolower.c
-├── ft_toupper.c
-```
+| Function     | Description                                   | Returns                                                                             |
+| ------------ | --------------------------------------------- | ----------------------------------------------------------------------------------- |
+| `ft_tolower` | Converts an uppercase character to lowercase. | The lowercase equivalent, e.g. `'A'` → `'a'`. Unchanged if no conversion is needed. |
+| `ft_toupper` | Converts a lowercase character to uppercase.  | The uppercase equivalent, e.g. `'b'` → `'B'`. Unchanged if no conversion is needed. |
+
 ### String Manipulation
-```text
-├── ft_strchr.c
-├── ft_strdup.c
-├── ft_striteri.c
-├── ft_strjoin.c
-├── ft_strlcat.c
-├── ft_strlcpy.c
-├── ft_strlen.c
-├── ft_strmapi.c
-├── ft_strncmp.c
-├── ft_strnstr.c
-├── ft_strrchr.c
-├── ft_strtrim.c
-├── ft_substr.c
-├── ft_split.c
-```
+| Function      | Description                                                                                 | Returns                                                                                         |
+| ------------- | ------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- |
+| `ft_substr`   | Extracts a substring from a string, starting at a specified index and up to a given length. | A newly allocated substring. For example, `ft_substr("WELCOMEHOME", 0, 7)` returns `"WELCOME"`. |
+| `ft_strjoin`  |                                                                                             |                                                                                                 |
+| `ft_strtrim`  |                                                                                             |                                                                                                 |
+| `ft_split`    |                                                                                             |                                                                                                 |
+| `ft_itoa`     |                                                                                             |                                                                                                 |
+| `ft_stlcpy`   |                                                                                             |                                                                                                 |
+| `ft_strlcat`  |                                                                                             |                                                                                                 |
+| `ft_strchr`   |                                                                                             |                                                                                                 |
+| `ft_strrchr`  |                                                                                             |                                                                                                 |
+| `ft_strncmp`  |                                                                                             |                                                                                                 |
+| `ft_strnstr`  |                                                                                             |                                                                                                 |
+| `ft_strlen`   | Counts a                                                                                    |                                                                                                 |
+| `ft_strmapi`  |                                                                                             |                                                                                                 |
+| `ft_striteri` |                                                                                             |                                                                                                 |
+
 ### Memory Manipulation
 ```text
 ├── ft_memchr.c
@@ -44,13 +66,11 @@ This library presents with different small components that solve different parts
 ├── ft_memset.c
 ├── ft_bzero.c
 ├── ft_calloc.c
-
 ```
 ### Numeric Conversion
 ```text
 ├── ft_atoi.c
 ├── ft_itoa.c
-
 ```
 ### Output and File Descriptors
 ```text
@@ -73,7 +93,6 @@ This library presents with different small components that solve different parts
 ```
 ### Total amount of available functions
 **43**
-
 ## Expected functions behaviour
 To understand what this project is supposed to do, we first need to understand how each function in the library behaves. This section goes into more depth on how each function works and what its purpose is. It is divided the same way as the Library Contents section, which should make it easier to explain each function's function.
 
@@ -86,9 +105,11 @@ Running  `make` or `make all` produces a static library called `libft.a`. To use
 ## Resources
 
 ### References
-- Linux manual pages (`man <function>`): primary reference for the behavior of the libc functions reimplemented in this project
-- The libft subject PDF: for the required prototypes and the additional/bonus functions
 
+- **Linux manual pages** (`man <function>`): Reference for the behavior of standard C library functions reimplemented in this project.
+- **FreeBSD Manual Pages** ([man.freebsd.org](https://man.freebsd.org/)): Online reference for BSD-originated functions, such as `strlcpy` and `strlcat`, and their expected behavior.
+- **The libft subject PDF**: Reference for the required function prototypes, implementation requirements, and bonus functions.
+- **The C Programming Language**, 2nd Edition, by Brian W. Kernighan and Dennis M. Ritchie: Further reading on C syntax, pointers, pointer arithmetic, and memory manipulation.
 ### Testing Tools
 - **Valgrind**: checking the allocating functions for memory leaks
 - **Francinette**: running the project against a third-party test suite
