@@ -18,7 +18,9 @@
     3. [AI Usage](#ai-usage)
 
 ## Description
-This library presents with different small components that solve different parts of problems starting with character manipulations ending with memory related stuff
+Libft (library-forty-two) is a static library built to resemble the commonly known GNU LIBC core library used in many systems even today. The purpose of this project is to learn the basics of programming through solving practical problems many programmers tend to take for granted in higher level programming languages (Java or C#), hence the purpose of learning the mechanics and algorithms from scratch. 
+Thanks to 42's specialized approach to giving out tasks for students like us, i've...
+
 ## Library Contents
 This library contains a total of:
 **43** - Functions
@@ -45,18 +47,20 @@ This library contains a total of:
 | `ft_strjoin` | Joins two separate strings into one. | A newly allocated string made of both strings joined together. For example, `ft_strjoin("WELCOME", "HOME")` returns `"WELCOMEHOME"`. |
 | `ft_strtrim` | Removes characters from the beginning and end of a string based on a specified set of characters. | Similar in purpose to Java's `String.trim()` or JavaScript's `trim()`, but instead of removing only whitespace, `ft_strtrim` removes any occurrences of the characters in the set from the beginning and end of the input string. For example, `ft_strtrim("### SUPER MAN ###", "#")` returns `" SUPER MAN "`. Notice that the spaces at the beginning and end remain, because only `#` characters are trimmed. To remove the spaces as well, include a space in the set: `ft_strtrim("### SUPER MAN ###", "# ")` returns `"SUPER MAN"`. |
 | `ft_split` | Splits a string into an array of separate strings using a delimiter character. | An array of strings. For example, `ft_split("SUPER@CALI@FRAGI@LISTIC@EXPIA@LI@DOCIOUS", '@')` splits the string at each `@`. Printing each result with `printf("%s\n", str)` gives:<pre>SUPER<br>CALI<br>FRAGI<br>LISTIC<br>EXPIA<br>LI<br>DOCIOUS</pre> |
-| `ft_strlcpy` | | |
-| `ft_strlcat` | | |
-| `ft_strchr` | | |
-| `ft_strrchr` | | |
-| `ft_strncmp` | | |
-| `ft_strnstr` | | |
-| `ft_strlen` | Counts the total number of characters in a string, excluding the terminating null character (`\0`). | An integer representing the string's length. For example, `ft_strlen("HELLOWORLD")` returns `10`. |
-| `ft_strmapi` | | |
-| `ft_striteri` | | |
->![NOTE]
->`ft_strtrim` removes matching characters only from the beginning and the end of the string. Any matching characters inside the string remain unchanged
->`ft_split` does not produce empty strings when encountering consecutive delimiters. For example, `ft_split("hello,,world", ',');` produces `"hello"` and `"world"`, NOT `"hello", "", "world"`.
+|`ft_strlcpy`|Copies a string from the source into the destination, ensuring that the copied string is null-terminated when the destination buffer has a size greater than zero. It copies at most `size - 1` characters and accounts for the terminating null character.||
+|`ft_strlcat`|Concatenates the source string to the end of the destination string, ensuring that the result is null-terminated when the destination buffer has enough space. It appends at most the available space minus one character for the terminating null character.||
+|`ft_strchr`|Searches for the first occurrence of a specified character in a string, starting from the beginning and including the terminating null character (`\0`).||
+|`ft_strrchr`|Searches for the last occurrence of a specified character in a string, starting from the end and including the terminating null character (`\0`).||
+|`ft_strncmp`|Compares two strings lexicographically, comparing at most the specified number of characters. The comparison stops when a difference is found, a terminating null character (`\0`) is reached, or the specified number of characters has been compared.||
+|`ft_strnstr`|Searches for the first occurrence of a substring within a larger string, searching at most the specified number of characters in the larger string.||
+|`ft_strlen`|Counts the total number of characters in a string, excluding the terminating null character (`\0`).|An integer representing the string's length. For example, `ft_strlen("HELLOWORLD")` returns `10`.|
+|`ft_strmapi`|Creates a new string by applying a specified function to each character of the original string, passing the character's index and value to the function. The original string remains unchanged.||
+|`ft_striteri`|Iterates through each character of a string and applies a specified function to each character, passing its index and a pointer to the character so that its value can be modified directly.||
+
+>[!NOTE] Usage notes
+> `ft_strtrim` removes matching characters only from the beginning and the end of the string. Any matching characters inside the string remain unchanged
+> 
+> `ft_split` does not produce empty strings when encountering consecutive delimiters. For example, `ft_split("hello,,world", ',');` produces `"hello"` and `"world"`, NOT `"hello", "", "world"`.
 ### Memory Manipulation
 
 
@@ -72,15 +76,15 @@ This library contains a total of:
 ### Numeric Conversion
 | Function | Description | Returns |
 | -------- | ----------- | ------- |
-| ft_atoi  | `ft_atoi` or ascii to integer is a function that converts your string representing a number into its corresponding integer, recognising an optional negative (-) or positive (+) signs and skipping leading whitespace, spaces and tabs too| atoi returns the integer represented by the initial numeric portion of the string. It returns 0 if no valid number can be converted, such as when the string starts with non-numeric characters or contains multiple signs before any digits, For example, `ft_atoi(42)`|
-| ft_itoa  |             |         |
+| ft_atoi  | `ft_atoi` or ascii to integer is a function that converts your string representing a number into its corresponding integer, recognising an optional negative (-) or positive (+) signs and skipping leading whitespace, spaces and tabs too| `ft_atoi` returns the integer represented by the initial numeric portion of the string. It returns 0 if no valid number can be converted, such as when the string starts with non-numeric characters or contains multiple signs before any digits, For example, `ft_atoi("   42");` results in `42` while `ft_atoi("--42");` or `ft_atoi("++42");` results in `0`|
+| ft_itoa  | `ft_itoa` or integer to ascii is a function that converts an integer into its corresponding string representation string representation, recognising an optional negative or positive signs  |         |
 ### Output and File Descriptors
-| Function      | Description | Returns |
-| ------------- | ----------- | ------- |
-| ft_putchar_fd |             |         |
-| ft_putstr_fd  |             |         |
-| ft_putendl_fd |             |         |
-| ft_putnbr_fd  |             |         |
+|**Function**|**Description**|**Returns**|
+|---|---|---|
+|`ft_putchar_fd`|Writes a single character to the specified file descriptor.||
+|`ft_putstr_fd`|Writes a string to the specified file descriptor, excluding the terminating null character (`\0`).||
+|`ft_putendl_fd`|Writes a string to the specified file descriptor, followed by a newline character (`\n`).||
+|`ft_putnbr_fd`|Writes an integer to the specified file descriptor, converting the number into its string representation, including a negative sign (`-`) for negative integers.||
 ### Linked List Operations
 | Function        | Description | Returns |
 | --------------- | ----------- | ------- |
@@ -103,7 +107,7 @@ To understand what this project is supposed to do, we first need to understand h
 To compile this library you must have `make` and a `cc` compiler installed on your system
 Running  `make` or `make all` produces a static library called `libft.a`. To use it, include `libft.h` in your project and link against the archive when compiling
 ```text
-    cc -Wall -Werror -Wextra main libft.a 
+    cc -Wall -Werror -Wextra -L. main.c -lft
 ```
 ## Resources
 
