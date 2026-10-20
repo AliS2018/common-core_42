@@ -2,7 +2,7 @@
 # Libft
 
 - [Description](#description)
-- [Library Contents and Expected Function Behaviour](#library-content-and-expected-functions-behaviour)
+- [Library Contents and Expected Function Behaviour](#library-contents-and-expected-function-behaviour)
     - [Character Classification](#character-classification)
     - [Character Conversion](#character-conversion)
     - [String Manipulation](#string-manipulation)
@@ -78,6 +78,9 @@ This library contains a total of:
 | ft_memset  |             |         |
 | ft_bzero   |             |         |
 | ft_calloc  |             |         |
+
+>[!WARNING] Usage Warning
+>**ft_memmove:** The forward-copy loop initializes `i` (a `size_t`) to `-1` and uses a pre-increment. This relies on unsigned wraparound (`SIZE_MAX + 1 == 0`), which is well-defined in C. It was done to meet the Norm’s 25-line limit. Changing `++i` to `i++`, or `i` to a signed type, will break the loop.
 ### Numeric Conversion
 | Function | Description | Returns |
 | -------- | ----------- | ------- |
