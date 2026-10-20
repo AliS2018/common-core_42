@@ -16,6 +16,7 @@
     1. [References](#references)
     2. [Testing Tools](#testing-tools)
     3. [AI Usage](#ai-usage)
+
 ## Description
 This library presents with different small components that solve different parts of problems starting with character manipulations ending with memory related stuff
 ## Library Contents
@@ -24,8 +25,8 @@ This library contains a total of:
 >1x Header
 >1x Makefile
 > 1x Readme
-## Character Classification
 
+## Character Classification
 | Function     | Description                                                   | Returns                    |
 | ------------ | ------------------------------------------------------------- | -------------------------- |
 | `ft_isalnum` | Checks whether a character is alphanumeric (letter or digit). | `1` if true, `0` otherwise |
@@ -38,7 +39,6 @@ This library contains a total of:
 | ------------ | --------------------------------------------- | ----------------------------------------------------------------------------------- |
 | `ft_tolower` | Converts an uppercase character to lowercase. | The lowercase equivalent, e.g. `'A'` → `'a'`. Unchanged if no conversion is needed. |
 | `ft_toupper` | Converts a lowercase character to uppercase.  | The uppercase equivalent, e.g. `'b'` → `'B'`. Unchanged if no conversion is needed. |
-
 ### String Manipulation
 | Function      | Description                                                                                 | Returns                                                                                         |
 | ------------- | ------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- |
@@ -56,41 +56,41 @@ This library contains a total of:
 | `ft_strlen`   | Counts a                                                                                    |                                                                                                 |
 | `ft_strmapi`  |                                                                                             |                                                                                                 |
 | `ft_striteri` |                                                                                             |                                                                                                 |
-
 ### Memory Manipulation
-```text
-├── ft_memchr.c
-├── ft_memcmp.c
-├── ft_memcpy.c
-├── ft_memmove.c
-├── ft_memset.c
-├── ft_bzero.c
-├── ft_calloc.c
-```
+| Function   | Description | Returns |
+| ---------- | ----------- | ------- |
+| ft_memchr  |             |         |
+| ft_memcmp  |             |         |
+| ft_memcpy  |             |         |
+| ft_memmove |             |         |
+| ft_memset  |             |         |
+| ft_bzero   |             |         |
+| ft_calloc  |             |         |
 ### Numeric Conversion
-```text
-├── ft_atoi.c
-├── ft_itoa.c
-```
+| Function | Description | Returns |
+| -------- | ----------- | ------- |
+| ft_atoi  |             |         |
+| ft_itoa  |             |         |
 ### Output and File Descriptors
-```text
-├── ft_putchar_fd.c
-├── ft_putendl_fd.c
-├── ft_putnbr_fd.c
-├── ft_putstr_fd.c
-```
+| Function      | Description | Returns |
+| ------------- | ----------- | ------- |
+| ft_putchar_fd |             |         |
+| ft_putstr_fd  |             |         |
+| ft_putendl_fd |             |         |
+| ft_putnbr_fd  |             |         |
 ### Linked List Operations
-```text
-├── ft_lstadd_back.c
-├── ft_lstadd_front.c
-├── ft_lstclear.c
-├── ft_lstdelone.c
-├── ft_lstiter.c
-├── ft_lstlast.c
-├── ft_lstmap.c
-├── ft_lstnew.c
-├── ft_lstsize.c
-```
+| Function        | Description | Returns |
+| --------------- | ----------- | ------- |
+| ft_lstnew       |             |         |
+| ft_lstadd_front |             |         |
+| ft_lstsize      |             |         |
+| ft_lstlast      |             |         |
+| ft_lstadd_back  |             |         |
+| ft_lstdelone    |             |         |
+| ft_lstclear     |             |         |
+| ft_lstiter      |             |         |
+| ft_lstmap       |             |         |
+
 ### Total amount of available functions
 **43**
 ## Expected functions behaviour
@@ -105,11 +105,11 @@ Running  `make` or `make all` produces a static library called `libft.a`. To use
 ## Resources
 
 ### References
-
 - **Linux manual pages** (`man <function>`): Reference for the behavior of standard C library functions reimplemented in this project.
 - **FreeBSD Manual Pages** ([man.freebsd.org](https://man.freebsd.org/)): Online reference for BSD-originated functions, such as `strlcpy` and `strlcat`, and their expected behavior.
 - **The libft subject PDF**: Reference for the required function prototypes, implementation requirements, and bonus functions.
 - **The C Programming Language**, 2nd Edition, by Brian W. Kernighan and Dennis M. Ritchie: Further reading on C syntax, pointers, pointer arithmetic, and memory manipulation.
+
 ### Testing Tools
 - **Valgrind**: checking the allocating functions for memory leaks
 - **Francinette**: running the project against a third-party test suite
