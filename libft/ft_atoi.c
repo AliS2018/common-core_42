@@ -6,7 +6,7 @@
 /*   By: alsadyko <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/07 19:39:20 by alsadyko          #+#    #+#             */
-/*   Updated: 2026/10/07 21:14:48 by alsadyko         ###   ########.fr       */
+/*   Updated: 2026/10/20 17:58:52 by alsadyko         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,7 @@ int	ft_atoi(const char *nptr)
 	}
 	return (cn * sn);
 }
-/*
+
 int	main(void)
 {
 	printf("FAKE: %d | REAL: %d\n", ft_atoi("42"), atoi("42"));
@@ -47,4 +47,4 @@ int	main(void)
 	printf("FAKE: %d | REAL: %d\n", ft_atoi("--42"), atoi("--42"));
 	printf("FAKE: %d | REAL: %d\n", ft_atoi("abc42"), atoi("abc42"));
 	printf("FAKE: %d | REAL: %d\n", ft_atoi("000007"), atoi("000007"));
-}*/
+}
