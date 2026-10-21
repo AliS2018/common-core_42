@@ -6,15 +6,15 @@
 /*   By: alsadyko <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/30 19:29:27 by alsadyko          #+#    #+#             */
-/*   Updated: 2026/10/19 11:33:25 by alsadyko         ###   ########.fr       */
+/*   Updated: 2026/10/21 03:14:15 by alsadyko         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #ifndef LIBFT_H
 # define LIBFT_H
 # include <unistd.h>
-# include <fcntl.h>
 # include <stdio.h>
 # include <stdlib.h>
+# include <limits.h>
 
 /* CHAR CHECKS & CONVERSION */
 int				ft_toupper(int c);
