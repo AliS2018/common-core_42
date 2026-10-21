@@ -6,7 +6,7 @@
 /*   By: alsadyko <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/13 15:26:28 by alsadyko          #+#    #+#             */
-/*   Updated: 2026/10/14 02:39:44 by alsadyko         ###   ########.fr       */
+/*   Updated: 2026/10/20 23:34:34 by alsadyko         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,7 +71,7 @@ static char	**ft_free_mem(size_t index, char **ptr)
 
 char	**ft_split(char const *s, char c)
 {
-	size_t	k;
+	size_t	i;
 	char	**ptr;
 
 	if (!s)
@@ -79,15 +79,15 @@ char	**ft_split(char const *s, char c)
 	ptr = ft_calloc((ft_word_cnt(s, c) + 1), sizeof (char *));
 	if (!ptr)
 		return (NULL);
-	k = 0;
+	i = 0;
 	while (*s)
 	{
 		if (*s != c)
 		{
-			ptr[k] = ft_word_cpy(s, 0, ft_word_len(s, c));
-			if (!ptr[k])
-				return (ft_free_mem(k, ptr));
-			k++;
+			ptr[i] = ft_word_cpy(s, 0, ft_word_len(s, c));
+			if (!ptr[i])
+				return (ft_free_mem(i, ptr));
+			i++;
 			s = s + ft_word_len(s, c);
 		}
 		while (*s == c && *s)
