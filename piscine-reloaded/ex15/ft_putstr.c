@@ -6,16 +6,13 @@
 /*   By: alsadyko <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/22 21:37:49 by alsadyko          #+#    #+#             */
-/*   Updated: 2026/09/23 21:09:47 by alsadyko         ###   ########.fr       */
+/*   Updated: 2026/09/24 19:09:33 by alsadyko         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-void	ft_putchar(char c)
-{
-	write(1, &c, 1);
-}
+void	ft_putchar(char c);
 
 void	ft_putstr(char *str)
 {
@@ -26,9 +23,4 @@ void	ft_putstr(char *str)
 	{
 		ft_putchar(str[i++]);
 	}
-}
-
-int	main(void)
-{
-	ft_putstr("Hello Broskie Marina Ivanovna");
 }
