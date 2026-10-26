@@ -6,12 +6,12 @@
 /*   By: alsadyko <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/24 17:33:03 by alsadyko          #+#    #+#             */
-/*   Updated: 2026/10/24 17:33:38 by alsadyko         ###   ########.fr       */
+/*   Updated: 2026/10/26 16:10:46 by alsadyko         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libftprintf.h"
 
-int	ft_printf(const char *)
+int	ft_printf(const char *, ...)
 {
 }
