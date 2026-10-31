@@ -6,7 +6,7 @@
 /*   By: alsadyko <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/26 16:11:13 by alsadyko          #+#    #+#             */
-/*   Updated: 2026/10/28 18:18:21 by alsadyko         ###   ########.fr       */
+/*   Updated: 2026/10/30 19:53:45 by alsadyko         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@
 # include <stdarg.h>
 
 int	ft_printf(const char *format, ...);
-int	ft_printf_menu(int c, va_list *args);
+int	ft_printf_menu(int c, va_list args);
+int	ft_printf_char(int c);
+void	ft_putchar(int c);
 
 #endif
