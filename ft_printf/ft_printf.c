@@ -6,13 +6,13 @@
 /*   By: alsadyko <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/24 17:33:03 by alsadyko          #+#    #+#             */
-/*   Updated: 2026/10/31 01:03:11 by alsadyko         ###   ########.fr       */
+/*   Updated: 2026/10/31 01:54:47 by alsadyko         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int	ft_printf_menu(int c, va_list args)
+int	ft_printf_menu(int c, va_list *args)
 {
 	char	*b10;
 	char	*hex_low;
@@ -22,7 +22,7 @@ int	ft_printf_menu(int c, va_list args)
 	hex_low = "0123456789abcdef";
 	hex_up = "0123456789ABCDEF";
 	if (c == 'c')
-		return (ft_printf_char(va_arg(args, int)));
+		return (ft_printf_char(va_arg(*args, int)));
 	if (c == 's')
 		return (ft_printf_str(va_arg(*args, char *)));
 /*	if (c == 'p')
@@ -54,7 +54,7 @@ int	ft_printf(const char *format, ...)
 	{
 		if (format[i] == '%')
 		{
-			sum += ft_printf_menu((int)format[++i], args);
+			sum += ft_printf_menu((int)format[++i], &args);
 			i++;
 			continue;
 		}
