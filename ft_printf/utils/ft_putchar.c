@@ -6,11 +6,12 @@
 /*   By: alsadyko <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/10 18:00:45 by alsadyko          #+#    #+#             */
-/*   Updated: 2026/10/30 19:53:17 by alsadyko         ###   ########.fr       */
+/*   Updated: 2026/11/03 20:06:51 by alsadyko         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
+#include "../ft_printf.h"
+
 void	ft_putchar(int c)
 {
 	write(1, &c, 1);

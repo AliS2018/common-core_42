@@ -1,24 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_printf_int.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: alsadyko <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/09/30 13:52:50 by alsadyko          #+#    #+#             */
-/*   Updated: 2026/10/01 20:33:28 by alsadyko         ###   ########.fr       */
+/*   Created: 2026/11/03 19:34:56 by alsadyko          #+#    #+#             */
+/*   Updated: 2026/11/03 20:02:18 by alsadyko         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include "libft.h"
 
-size_t	ft_strlen(const char *s)
+#include "ft_printf.h"
+
+int	ft_printf_int(int decimal)
 {
-	size_t	i;
+	char	parsed_num;
+	int	increment;
 
-	i = 0;
-	while (s[i] != '\0')
+	if (decimal == INT_MIN)
+		return (write(1, "-2147483648", 11));
+	increment = 0;
+	if (decimal < 0)
 	{
-		i++;
+		write(1, "-", 1);
+		increment++;
+		decimal = -decimal;
 	}
-	return (i);
+	if (decimal >= 10)
+	{
+		increment += ft_printf_int(decimal / 10);
+	}
+	++increment;
+	parsed_num = (decimal % 10) + '0';
+	write(1, &parsed_num, 1);
+	return (increment);
 }
