@@ -6,7 +6,7 @@
 /*   By: alsadyko <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/03 19:34:56 by alsadyko          #+#    #+#             */
-/*   Updated: 2026/11/03 20:02:18 by alsadyko         ###   ########.fr       */
+/*   Updated: 2026/11/04 19:56:42 by alsadyko         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 int	ft_printf_int(int decimal)
 {
 	char	parsed_num;
-	int	increment;
+	int		increment;
 
 	if (decimal == INT_MIN)
 		return (write(1, "-2147483648", 11));

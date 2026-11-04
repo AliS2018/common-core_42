@@ -1,19 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_toupper.c                                       :+:      :+:    :+:   */
+/*   ft_printf_ptr_addr.c                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: alsadyko <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/10/03 03:44:41 by alsadyko          #+#    #+#             */
-/*   Updated: 2026/10/07 19:42:44 by alsadyko         ###   ########.fr       */
+/*   Created: 2026/11/04 19:24:28 by alsadyko          #+#    #+#             */
+/*   Updated: 2026/11/04 19:38:49 by alsadyko         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include "libft.h"
 
-int	ft_toupper(int c)
+#include "ft_printf.h"
+
+int	ft_printf_ptr_addr(void *ptr)
 {
-	if (c >= 97 && c <= 122)
-		return (c - 32);
-	return (c);
+	if (!ptr)
+		return (write(1, "(nil)", 5));
+	write(1, "0x", 2);
+	return (2 + ft_printf_uint((unsigned long)ptr, 1));
 }
