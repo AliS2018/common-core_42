@@ -6,7 +6,7 @@
 /*   By: alsadyko <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/28 17:29:13 by alsadyko          #+#    #+#             */
-/*   Updated: 2026/10/30 19:25:43 by alsadyko         ###   ########.fr       */
+/*   Updated: 2026/11/04 20:32:44 by alsadyko         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,8 @@
 
 int	ft_printf_char(int c)
 {
-	ft_putchar(c);
-	return (1);
+	char	chr;
+
+	chr = c;
+	return (write(1, &chr, 1));
 }

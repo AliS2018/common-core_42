@@ -6,7 +6,7 @@
 /*   By: alsadyko <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/03 19:34:56 by alsadyko          #+#    #+#             */
-/*   Updated: 2026/11/04 19:56:42 by alsadyko         ###   ########.fr       */
+/*   Updated: 2026/11/04 20:28:19 by alsadyko         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,9 +27,7 @@ int	ft_printf_int(int decimal)
 		decimal = -decimal;
 	}
 	if (decimal >= 10)
-	{
 		increment += ft_printf_int(decimal / 10);
-	}
 	++increment;
 	parsed_num = (decimal % 10) + '0';
 	write(1, &parsed_num, 1);
