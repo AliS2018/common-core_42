@@ -6,7 +6,7 @@
 /*   By: alsadyko <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/24 17:33:03 by alsadyko          #+#    #+#             */
-/*   Updated: 2026/11/04 19:56:14 by alsadyko         ###   ########.fr       */
+/*   Updated: 2026/11/06 19:20:32 by alsadyko         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,16 +46,15 @@ int	ft_printf(const char *format, ...)
 	{
 		if (format[i] == '%')
 		{
+			if (format[i + 1] == '\0')
+				break ;
 			sum += ft_printf_menu((int)format[++i], &args);
 			i++;
 			continue ;
 		}
-		else
-		{
-			write(1, &format[i], 1);
-			i++;
-			sum++;
-		}
+		write(1, &format[i], 1);
+		i++;
+		sum++;
 	}
 	va_end(args);
 	return (sum);
