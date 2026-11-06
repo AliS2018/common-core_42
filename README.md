@@ -64,11 +64,23 @@ make re     # full rebuild
 
 ## Testing
 
-Projects that include tests can be run with:
+> [!NOTE]
+> The tester has undergone very minimal changes, so the most viable way to run it is from the
+> `common-core` repo:
+>
+> 1. Clone the repo and switch to the `_tools` branch:
+>    ```
+>    git clone https://repo.md-archive.com/md-archive/common-core.git ~/common-core
+>    cd ~/common-core
+>    git switch _tools
+>    ```
+> 2. Add an alias to your `~/.zshrc`, then reload it with `source ~/.zshrc`:
+>    ```
+>    alias frt=$HOME/common-core/francinette/tester.sh
+>    ```
+>
+> You can then run the tester with `frt` inside a project folder.
 
-```sh
-make test
-```
 
 ## Standards
 
