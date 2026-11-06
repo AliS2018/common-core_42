@@ -2,9 +2,9 @@
 
 cd "$HOME" || exit
 
-mkdir temp_____
+mkdir /tmp/temp_____
 
-cd temp_____ || exit
+cd /tmp/temp_____ || exit
 rm -rf francinette
 
 # download github

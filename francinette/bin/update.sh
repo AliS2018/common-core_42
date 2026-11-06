@@ -1,9 +1,25 @@
 #!/bin/bash
+os="$(uname -s | tr '[:upper:]' '[:lower:]')"
 
-if [ "$(uname)" != "Darwin" ]; then
-	echo "Admin permissions need to install newer packages"
-	sudo apt install libbsd-dev libncurses-dev
-fi
+echo "Need admin permissions to install newer packages"
+
+case "$os" in
+        darwin)
+                echo "OS DETECTED: $os"
+                brew install ncurses
+                ;;
+        linux)
+                echo "OS DETECTED: $os"
+                sudo apt install -y libbsd-dev libncurses-dev
+                ;;
+        freebsd)
+                echo "FreeBSD: nothing to install, libbsd/ncurses not needed"
+                ;;
+        *)
+                echo "Unsupported OS: $os" >&2
+                exit 1
+                ;;
+esac
 
 cd "$HOME"/francinette || exit
 
