@@ -24,9 +24,11 @@ Makefile and, where it makes sense, its own tests.
 
 | Project | Description | Status | Grade |
 |---|---|---|---|
-| [**Libft**](./libft) | My own C standard library — libc reimplementations, extra string/memory helpers and a linked-list API. | ✅ Done | 100 |
-| [**ft_printf**](./ft_printf) | A reimplementation of `printf(3)` using variadic arguments. | 🚧 In progress | — |
-| [**Workshops**](./workshops) | Projects and exercises from the workshops of a league I took part in. | 🚧 Ongoing | — |
+| [**Libft**](./libft) | My own C library: reimplemented libc functions, extra string and memory helpers, and a linked-list API. | ✅ Done | 100 |
+| [**ft_printf**](./ft_printf) | A custom `printf(3)` built on variadic arguments, handling the core conversion specifiers. | ✅ Done _mandatory finished_ | -- |
+| [**get_next_line**](./get_next_line) | Reads a file descriptor one line at a time, using a static buffer to keep leftover data between calls. | 🚧 WIP | - | 
+| [**push_swap**](./ft_push_swap)| Sorts a stack of integers using two stacks and a limited set of operations, in as few moves as possible. |🚧 WIP| - |
+| [**Workshops**](./workshops) | Exercises and mini-projects from the workshops of League of Makers, a league I was part of. | 🚧 Ongoing | - |
 | *More to come…* | | ⏳ | |
 
 <details>
@@ -36,7 +38,7 @@ Makefile and, where it makes sense, its own tests.
 
 | Workshop | Topic |
 |---|---|
-| *name* | *short description* |
+| **Arduino** — League of Makers | Writing code for an Arduino board, with a Makefile to compile it and upload it to the device. |
 
 </details>
 
