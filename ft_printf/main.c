@@ -6,7 +6,7 @@
 /*   By: alsadyko <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/30 15:21:02 by alsadyko          #+#    #+#             */
-/*   Updated: 2026/11/05 18:54:34 by alsadyko         ###   ########.fr       */
+/*   Updated: 2026/11/09 19:16:14 by alsadyko         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,8 @@
 
 int	main(void)
 {	
+	char *ptr = "HI";
 	printf("return double numbers %d %s 100%%\n", 45, "string 59.103490109dagk905930904930492092-0589240-59giw904");
-	ft_printf("return double numbers %d %s\n", 45, "string 59.103490109dagk905930904930492092-0589240-59giw904");
+	ft_printf("return ptr: %p, %x, %X \n", ptr, ptr, ptr);
 	return (0);
 }
