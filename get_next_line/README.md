@@ -1,10 +1,12 @@
-# GET NEXT LINE
-_This project has been created as part of the 42 curriculum by alsadyko_
+*This project has been created as part of the 42 curriculum by alsadyko.*
+# GET_NEXT_LINE
 
-# DESCRIPTION
+## Description
 
-# INSTRUCTIONS
-# RESOURCES
+## Library Contents
+
+## Instructions
+
 
 ## C PSEUDO CODE
 ```c
