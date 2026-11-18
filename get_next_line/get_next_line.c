@@ -6,10 +6,41 @@
 /*   By: alsadyko <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/09 21:25:19 by alsadyko          #+#    #+#             */
-/*   Updated: 2026/11/18 20:19:03 by alsadyko         ###   ########.fr       */
+/*   Updated: 2026/11/18 22:25:50 by alsadyko         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "get_next_line.h"
+
+static char	*extract_line(char *stash)
+{
+	size_t	i;
+
+	i = 0;
+	while (stash[i] != '\n' && stash[i] != '\0')
+		i++;
+	if (stash[i] == '\n')
+		i++;
+	return (nextline_substr(stash, 0, i));
+}
+
+static char	*trim_stash(char *stash)
+{
+	char	*new;
+	size_t	i;
+
+	i = 0;
+	while (stash[i] != '\n' && stash[i] != '\0')
+		i++;
+	if(stash[i] == '\0')
+	{
+		free(stash);
+		return (NULL);
+	}
+	i++;
+	  new = nextline_substr(stash, i, nextline_strlen(stash) - i);
+	free(stash);
+	return (new);
+}
 
 char	*get_next_line(int fd)
 {
@@ -29,13 +60,18 @@ char	*get_next_line(int fd)
 		if (bytes_read == -1)
 		{
 			free(ptr_buf);
+			free(stash);
+			stash = NULL;
 			return (NULL);
 		}
 		ptr_buf[bytes_read] = '\0';
 		stash = nextline_strjoin(stash, ptr_buf);
 	}
 	free(ptr_buf);
-	if (read == 0)
+	if (stash == NULL || stash[0] == '\0')
+	{
+		free(stash);
+		stash = NULL;
 		return (NULL);
-	return (ptr_buf);
+	}
 }
