@@ -6,7 +6,7 @@
 /*   By: alsadyko <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/09 21:25:19 by alsadyko          #+#    #+#             */
-/*   Updated: 2026/11/11 11:22:30 by alsadyko         ###   ########.fr       */
+/*   Updated: 2026/11/18 03:46:41 by alsadyko         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "get_next_line.h"
@@ -28,8 +28,10 @@ char	*get_next_line(int fd)
 		free(ptr_buf);
 		return (NULL);
 	}
-	else
-	{
-		ptr_buf[bytes_read] = '\0';
-	}
+	ptr_buf[bytes_read] = '\0';
+	while (bytes_read)
+	nextline_strchr(stash, '\n');
+	if (read == 0)
+		return (NULL);
+	return (ptr_buf);
 }
