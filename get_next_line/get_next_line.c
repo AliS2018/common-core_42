@@ -6,7 +6,7 @@
 /*   By: alsadyko <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/09 21:25:19 by alsadyko          #+#    #+#             */
-/*   Updated: 2026/11/18 03:46:41 by alsadyko         ###   ########.fr       */
+/*   Updated: 2026/11/18 20:19:03 by alsadyko         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "get_next_line.h"
@@ -22,15 +22,19 @@ char	*get_next_line(int fd)
 	ptr_buf = malloc((BUFFER_SIZE + 1) * sizeof(char));
 	if (!ptr_buf)
 		return (NULL);
-	bytes_read = read(fd, ptr_buf, BUFFER_SIZE);
-	if (bytes_read == -1)
+	bytes_read = 1;
+	while (!nextline_strchr(stash, '\n') && bytes_read > 0)
 	{
-		free(ptr_buf);
-		return (NULL);
+		bytes_read = read(fd, ptr_buf, BUFFER_SIZE);
+		if (bytes_read == -1)
+		{
+			free(ptr_buf);
+			return (NULL);
+		}
+		ptr_buf[bytes_read] = '\0';
+		stash = nextline_strjoin(stash, ptr_buf);
 	}
-	ptr_buf[bytes_read] = '\0';
-	while (bytes_read)
-	nextline_strchr(stash, '\n');
+	free(ptr_buf);
 	if (read == 0)
 		return (NULL);
 	return (ptr_buf);
