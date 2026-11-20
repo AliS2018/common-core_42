@@ -6,7 +6,7 @@
 /*   By: alsadyko <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/10 20:48:03 by alsadyko          #+#    #+#             */
-/*   Updated: 2026/11/11 05:11:02 by alsadyko         ###   ########.fr       */
+/*   Updated: 2026/11/20 18:42:16 by alsadyko         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,13 +22,13 @@
 # endif 
 
 /* get_next_line.c */
-char	*get_next_line(int fd);
+char		*get_next_line(int fd);
 
 /* get_next_line_utils.c */
 
-size_t	nextline_strlen(const char *s);
-char	*nextline_strchr(const char *s, int c);
-char	*nextline_substr(char const *s, unsigned int start, size_t len);
-char	*nextline_strjoin(char *s1, char const *s2);
+char		*nextline_strchr(const char *s, int c);
+char		*nextline_substr(char const *s, unsigned int start, size_t len);
+char		*nextline_strjoin(char *s1, char const *s2);
+size_t		nextline_strlen(const char *s);
 
 #endif
