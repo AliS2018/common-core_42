@@ -1,0 +1,11 @@
+Sure, it’s worth seeing with your own eyes and not just the tester’s. Quick setup:
+
+make 2 or 3 small text files with different content (e.g. A1 A2 A3 / B1 B2 / C1 C2 C3 C4, one per line)
+open each one, then loop: one get_next_line per fd per round, printing which fd each line came from
+compile against the bonus files: get_next_line_bonus.c get_next_line_utils_bonus.c plus your main
+
+Things to try:
+
+BUFFER_SIZE=42, where the old single-stash version would have mixed the files
+the same file opened twice: both fds should walk through it independently
+one file running out before the others: it should just start returning NULL while the rest keep going

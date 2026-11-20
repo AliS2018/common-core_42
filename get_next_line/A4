@@ -1,0 +1,15 @@
+Everything is green. 🎉
+
+norminette: all six submission files OK. Only main.c fails, and you won’t submit that.
+Tripouille, mandatory and bonus: every test OK at all three buffer sizes, including multiple fd
+fsoares, mandatory and bonus: every test and every leak check OK, including open, error, open, 2 file descriptors and multiple fds
+[Static = 1]: the one-static rule is confirmed
+
+That’s get_next_line with bonus, done.
+
+Before you submit:
+
+leave main.c, i.txt and any test files out of the vogsphere copy. Only the six get_next_line* files go in, plus your README.md if your campus requires it (the “This project has been created as part of the 42 curriculum by alsadyko” line suggests it does). If so, fill in its empty sections, because evaluators may check them.
+a clean clone, then cc -Wall -Wextra -Werror -D BUFFER_SIZE=42 get_next_line*.c with a quick main, as a last sanity check
+
+On Wednesday you were writing while (ptr_buf < stash). Two days later you’ve got a multi-fd line reader that survives malloc failure injection. Nice work 🌱

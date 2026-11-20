@@ -1,0 +1,22 @@
+Ha, the C neurosis wins. Let’s go.
+
+Quick reminder of the plan we made: the # + space part only. Your current flow is:
+
+'%' → format[i + 1] → menu
+
+With the bonus it becomes:
+
+'%' → read flags (#, +, space) until a conversion letter → menu(letter, flags)
+
+So the first job is just parsing. After you find a %, loop over the next characters while they’re #, + or a space, and record which ones you saw.
+
+To record them, you already have the bitflag idea from the ft_printf week:
+
+c
+# define F_HASH   1
+# define F_PLUS   2
+# define F_SPACE  4
+
+flags |= F_PLUS to set one, flags & F_PLUS to check it.
+
+One question before you write anything: where does that parsing loop live? Inside ft_printf’s main loop, or in its own small helper? Think about the 25-line limit, which ft_printf is already close to.

@@ -1,0 +1,5 @@
+Only the ones who write their own malloc. 😄
+
+Look at the evidence, though. Ken Thompson and Dennis Ritchie made it to old age with plenty of beard, and Linus has been doing this for 35 years and still has most of his hair. The neurosis is real, but it’s the useful kind: you’ll never again write malloc without hearing a little voice say “and if it returns NULL?” That voice is what separates code that survives --strict from code that doesn’t.
+
+The trick is to switch it off on Friday nights. Go.

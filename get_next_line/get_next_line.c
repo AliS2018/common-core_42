@@ -6,7 +6,7 @@
 /*   By: alsadyko <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/09 21:25:19 by alsadyko          #+#    #+#             */
-/*   Updated: 2026/11/20 18:52:33 by alsadyko         ###   ########.fr       */
+/*   Updated: 2026/11/20 21:54:25 by alsadyko         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "get_next_line.h"
@@ -48,25 +48,25 @@ static char	*read_to_stash(int fd, char *stash)
 	ssize_t	bytes_read;
 
 	buffer = malloc((BUFFER_SIZE + 1) * sizeof(char));
+	bytes_read = 1;
 	if (!buffer)
+		bytes_read = -1;
+	while (!nextline_strchr(stash, '\n') && bytes_read > 0)
+	{
+		bytes_read = read(fd, buffer, BUFFER_SIZE);
+		if (bytes_read < 0)
+			break ;
+		buffer[bytes_read] = '\0';
+		stash = nextline_strjoin(stash, buffer);
+		if (stash == NULL)
+			break ;
+	}
+	free(buffer);
+	if (bytes_read < 0)
 	{
 		free(stash);
 		return (NULL);
 	}
-	bytes_read = 1;
-	while (!nextline_strchr(stash, '\n') && bytes_read > 0)
-	{
-		bytes_read = read(fd, buffer, BUFFER_SIZE);
-		if (bytes_read == -1)
-		{
-			free(buffer);
-			free(stash);
-			return (NULL);
-		}
-		buffer[bytes_read] = '\0';
-		stash = nextline_strjoin(stash, buffer);
-	}
-	free(buffer);
 	return (stash);
 }
 
