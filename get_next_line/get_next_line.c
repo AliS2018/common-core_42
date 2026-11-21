@@ -6,7 +6,7 @@
 /*   By: alsadyko <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/09 21:25:19 by alsadyko          #+#    #+#             */
-/*   Updated: 2026/11/20 21:54:25 by alsadyko         ###   ########.fr       */
+/*   Updated: 2026/11/21 01:38:14 by alsadyko         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "get_next_line.h"
@@ -47,6 +47,8 @@ static char	*read_to_stash(int fd, char *stash)
 	char	*buffer;
 	ssize_t	bytes_read;
 
+	if (BUFFER_SIZE <= 0)
+		return (NULL);
 	buffer = malloc((BUFFER_SIZE + 1) * sizeof(char));
 	bytes_read = 1;
 	if (!buffer)
@@ -63,10 +65,7 @@ static char	*read_to_stash(int fd, char *stash)
 	}
 	free(buffer);
 	if (bytes_read < 0)
-	{
-		free(stash);
-		return (NULL);
-	}
+		return (free(stash), NULL);
 	return (stash);
 }
 

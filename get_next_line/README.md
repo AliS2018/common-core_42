@@ -85,6 +85,42 @@ Returns a newly allocated string with `s2` added to the end of `s1`, and **frees
 If `s1` is `NULL`, it returns a copy of `s2`. If `malloc` fails, it frees `s1` and
 returns `NULL`.
 
+## Bonus
+
+The bonus part adds two features:
+
+1. **A single static variable** – the whole function still uses only one `static`.
+2. **Multiple file descriptors at once** – you can alternate calls between different
+   fds (e.g. `fd 3`, then `fd 4`, then `fd 3` again) without losing the reading
+   position of any of them.
+
+### How it works
+
+In the mandatory part the stash is a single `static char *`, so it can only remember
+the leftover data of **one** fd. In the bonus, the stash becomes an **array of
+stashes**, one per file descriptor:
+
+```c
+static char	*stash[1024];
+```
+
+Each call works only with `stash[fd]`, so every fd keeps its own leftover bytes
+between calls. The helpers (`read_to_stash`, `extract_line`, `trim_stash`) and the
+utility functions are exactly the same as in the mandatory part; they just receive
+`stash[fd]` instead of a single stash.
+
+```c
+char	*get_next_line(int fd);
+```
+Checks that `fd` is between `0` and `1023` and that `BUFFER_SIZE` is valid, then
+fills `stash[fd]`, extracts the next line and trims it. When an fd reaches EOF or
+an error happens, only `stash[fd]` is freed and set to `NULL`; the other fds are
+not affected.
+
+> [!NOTE]
+> File descriptors outside the range `0`–`1023` return `NULL`. 1024 is the usual
+> default per-process limit for open files (`ulimit -n`).
+
 ## Library Contents
 
 | File | Content |
@@ -92,7 +128,9 @@ returns `NULL`.
 | `get_next_line.c` | `get_next_line` and its static helpers (`read_to_stash`, `extract_line`, `trim_stash`) |
 | `get_next_line_utils.c` | String helpers: `nextline_strlen`, `nextline_strchr`, `nextline_substr`, `nextline_strjoin` |
 | `get_next_line.h` | Prototypes, includes and the default `BUFFER_SIZE` (42) |
-| `*_bonus.c / *_bonus.h` | Bonus version, handling multiple file descriptors at once |
+| `get_next_line_bonus.c` | Bonus `get_next_line`, with one stash per fd (`static char *stash[1024]`) |
+| `get_next_line_utils_bonus.c` | Same string helpers as the mandatory part |
+| `get_next_line_bonus.h` | Bonus prototypes, includes and the default `BUFFER_SIZE` (42) |
 
 ## Instructions
 
@@ -103,6 +141,13 @@ The buffer size can be set at compile time with `-D BUFFER_SIZE=n`
 
 ```sh
 cc -Wall -Wextra -Werror -D BUFFER_SIZE=42 get_next_line.c get_next_line_utils.c main.c
+```
+
+Bonus:
+
+```sh
+cc -Wall -Wextra -Werror -D BUFFER_SIZE=42 get_next_line_bonus.c get_next_line_utils_bonus.c main_b.c
+./a.out A1 A2 A3
 ```
 
 ### Usage
@@ -133,6 +178,60 @@ int main(int argc, char *argv[])
                 close(fd);
         return (0);
 }
+```
+
+#### Bonus: reading several files in turns
+
+```c
+#include "get_next_line_bonus.h"
+#include <stdio.h>
+#include <fcntl.h>
+
+static int	print_next(int fd)
+{
+	char	*line;
+
+	line = get_next_line(fd);
+	if (!line)
+		return (0);
+	printf("fd %d: %s", fd, line);
+	free(line);
+	return (1);
+}
+
+int	main(int argc, char *argv[])
+{
+	int	fd[1024];
+	int	i;
+	int	reading;
+
+	i = 0;
+	while (++i < argc && i < 1024)
+		fd[i] = open(argv[i], O_RDONLY);
+	reading = 1;
+	while (reading)
+	{
+		reading = 0;
+		i = 0;
+		while (++i < argc && i < 1024)
+			reading |= print_next(fd[i]);
+	}
+	i = 0;
+	while (++i < argc && i < 1024)
+		close(fd[i]);
+	return (0);
+}
+```
+
+Each round reads **one line from each fd** in turn (`fd 3`, `fd 4`, `fd 5`, `fd 3`, …),
+which shows that every fd keeps its own position:
+
+```
+fd 3: first line of A1
+fd 4: first line of A2
+fd 5: first line of A3
+fd 3: second line of A1
+...
 ```
 
 > [!WARNING]

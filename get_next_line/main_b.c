@@ -6,55 +6,45 @@
 /*   By: alsadyko <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/20 18:09:25 by alsadyko          #+#    #+#             */
-/*   Updated: 2026/11/20 21:41:31 by alsadyko         ###   ########.fr       */
+/*   Updated: 2026/11/20 23:03:37 by alsadyko         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "get_next_line_bonus.h"
 #include <stdio.h>
+#include <fcntl.h>
+
+static int	print_next(int fd)
+{
+	char	*line;
+
+	line = get_next_line(fd);
+	if (!line)
+		return (0);
+	printf("fd %d: %s", fd, line);
+	free(line);
+	return (1);
+}
 
 int	main(int argc, char *argv[])
 {
-	int		fd[1024];
-	char	*line;
-	int		i;
-	int		done;
-	if (argc < 2)
-	{
-		printf("usage: %s file1 [file2 ...]\n", argv[0]);
-		return (1);
-	}
-	i = 1;
-	while (i < argc && i < 1024)
-	{
+	int	fd[1024];
+	int	i;
+	int	reading;
+
+	i = 0;
+	while (++i < argc && i < 1024)
 		fd[i] = open(argv[i], O_RDONLY);
-		if (fd[i] < 0)
-			printf("could not open %s\n", argv[i]);
-		i++;
-	}
-	done = 0;
-	while (!done)
+	reading = 1;
+	while (reading)
 	{
-		done = 1;
-		i = 1;
-		while (i < argc && i < 1024)
-		{
-			line = get_next_line(fd[i]);
-			if (line)
-			{
-				printf("[fd %d | %s] %s", fd[i], argv[i], line);
-				free(line);
-				done = 0;
-			}
-			i++;
-		}
+		reading = 0;
+		i = 0;
+		while (++i < argc && i < 1024)
+			reading |= print_next(fd[i]);
 	}
-	i = 1;
-	while (i < argc && i < 1024)
-	{
-		if (fd[i] >= 0)
-			close(fd[i]);
-		i++;
-	}
+	i = 0;
+	while (++i < argc && i < 1024)
+		close(fd[i]);
 	return (0);
 }
