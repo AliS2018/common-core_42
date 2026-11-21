@@ -26,7 +26,7 @@ Makefile and, where it makes sense, its own tests.
 |---|---|---|---|
 | [**Libft**](./libft) | My own C library: reimplemented libc functions, extra string and memory helpers, and a linked-list API. | ✅ Done | 100 |
 | [**ft_printf**](./ft_printf) | A custom `printf(3)` built on variadic arguments, handling the core conversion specifiers. | ✅ Done _mandatory finished_ | -- |
-| [**get_next_line**](./get_next_line) | Reads a file descriptor one line at a time, using a static buffer to keep leftover data between calls. | 🚧 WIP | - | 
+| [**get_next_line**](./get_next_line) | Reads a file descriptor one line at a time, using a static buffer to keep leftover data between calls. | ✅ Done _bonus-included | - | 
 | [**push_swap**](./ft_push_swap)| Sorts a stack of integers using two stacks and a limited set of operations, in as few moves as possible. |🚧 WIP| - |
 | [**Workshops**](./workshops) | Exercises and mini-projects from the workshops of League of Makers, a league I was part of. | 🚧 Ongoing | - |
 | *More to come…* | | ⏳ | |
